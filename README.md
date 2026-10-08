@@ -24,8 +24,8 @@ and do a real check:
 python flight_watch.py run
 ```
 
-The current grid (3 departure dates Feb 12–14 × 3 return dates Feb 20–22 × 2 airports =
-18 searches) takes about 2–3 minutes because it pauses between searches so Google doesn't
+The current grid (4 departure dates Feb 12–15 × 3 return dates Feb 20–22 × 2 airports =
+24 searches) takes about 2–3 minutes because it pauses between searches so Google doesn't
 block you.
 
 ## Phone alerts (optional, free)
@@ -62,7 +62,7 @@ sometimes blocks GitHub's servers; if runs start erroring, switch to SerpApi (be
   (`pip install -U fast-flights` usually fixes it).
 - `provider: serpapi` — paid-but-reliable Google Flights API. Set `SERPAPI_KEY` in your
   environment (or as a GitHub secret). The free tier is 250 searches/month, so shrink the
-  grid — at 30 searches/run you'd get about 8 runs a month.
+  grid — at 24 searches/run you'd get about 10 runs a month.
 
 ## Notes
 

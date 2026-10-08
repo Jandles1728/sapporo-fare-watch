@@ -6,7 +6,7 @@ destination: CTS             # Sapporo New Chitose
 
 # Every outbound date in this window is paired with every return date in the return window.
 depart_from: 2027-02-12
-depart_to:   2027-02-14
+depart_to:   2027-02-15
 return_from: 2027-02-20
 return_to:   2027-02-22
 # Prefer fixed trip lengths instead? Delete return_from/return_to and use e.g.:
