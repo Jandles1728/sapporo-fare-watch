@@ -2,9 +2,12 @@
 # Edit this file, then run:  python flight_watch.py run
 
 origins: [SEA, YVR]          # Seattle-Tacoma, Vancouver
-destination: CTS             # Sapporo New Chitose
+destination: CTS             # fly into Sapporo New Chitose
+# Fly home from a different city ("open jaw"). Remove these lines for a normal round trip.
+fly_home_from: [HND, NRT]    # Tokyo Haneda, Tokyo Narita
+compare_one_ways: true       # also price two separate one-way tickets and use whichever is cheaper
 
-# Every outbound date in this window is paired with every return date in the return window.
+# Every outbound date in this window is paired with every date you fly home.
 depart_from: 2027-02-12
 depart_to:   2027-02-15
 return_from: 2027-02-20
@@ -14,7 +17,7 @@ return_to:   2027-02-22
 
 adults: 1
 seat: economy                # economy / premium-economy / business / first
-max_stops: 1                 # 0 = nonstop only (none exist on these routes), 1, 2, or null for any
+max_stops: 1                 # per flight: 0 = nonstop only, 1, 2, or null for any
 timezone: America/Los_Angeles  # times shown in the report
 currency: USD                # one currency for both airports so prices compare fairly (use CAD if you prefer)
 

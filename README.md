@@ -1,8 +1,10 @@
 # Flight Watch — SEA / YVR → Sapporo (CTS)
 
-Checks round-trip fares for every departure date × return date in your windows, from both
-Seattle and Vancouver, saves every result to `prices.db`, alerts you on drops, and builds
-`report.html` (price heatmap per airport, change since last check, cheapest-over-time chart).
+Checks fares for every departure date × return date in your windows, from both Seattle and
+Vancouver: fly **into Sapporo (CTS)** and **home from Tokyo (Haneda or Narita)**. Each trip is
+priced two ways — one multi-city ticket, and two separate one-way tickets — and the cheaper
+one wins. Saves every result to `prices.db`, alerts you on drops, and builds `report.html`
+(price heatmap per airport, one-way ticket prices, cheapest-over-time chart).
 
 **Live report:** https://jandles1728.github.io/sapporo-fare-watch/ — refreshed after every
 check. Click any fare to open that exact search in Google Flights.
@@ -24,8 +26,8 @@ and do a real check:
 python flight_watch.py run
 ```
 
-The current grid (4 departure dates Feb 12–15 × 3 return dates Feb 20–22 × 2 airports =
-24 searches) takes about 2–3 minutes because it pauses between searches so Google doesn't
+The current setup (4 departure dates × 3 return dates × 2 home airports × 2 Tokyo airports,
+priced as one ticket and as one-ways) is 68 searches and takes about 7 minutes because it pauses between searches so Google doesn't
 block you.
 
 ## Phone alerts (optional, free)
@@ -62,11 +64,13 @@ sometimes blocks GitHub's servers; if runs start erroring, switch to SerpApi (be
   (`pip install -U fast-flights` usually fixes it).
 - `provider: serpapi` — paid-but-reliable Google Flights API. Set `SERPAPI_KEY` in your
   environment (or as a GitHub secret). The free tier is 250 searches/month, so shrink the
-  grid — at 24 searches/run you'd get about 10 runs a month.
+  grid — at 68 searches/run you'd get about 3 runs a month, so set `compare_one_ways: false` or
+  trim `fly_home_from`.
 
 ## Notes
 
-- Prices are the cheapest round-trip shown for each date pair, for the passengers/cabin/stop
+- Want a normal round trip again? Delete `fly_home_from` from `config.yaml`.
+- Prices are the cheapest fare Google shows for each date pair, for the passengers/cabin/stop
   limit in the config. Use the same `currency` for both airports so YVR and SEA compare fairly.
 - Change `currency`, and history in the old currency stays in the database but drops out of
   the report.
