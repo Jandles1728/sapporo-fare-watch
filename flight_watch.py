@@ -59,9 +59,25 @@ def date_combos(cfg: dict):
                 yield d, d + dt.timedelta(days=int(n))
 
 
-def google_flights_url(origin, dest, dep, ret, currency):
-    q = f"Flights from {origin} to {dest} on {dep} through {ret}"
-    return "https://www.google.com/travel/flights?" + urllib.parse.urlencode({"q": q, "curr": currency})
+def google_flights_url(origin, dest, dep, ret, currency, cfg=None):
+    """Exact Google Flights search: these dates, airports, round trip, stops, cabin, passengers."""
+    cfg = cfg or {}
+    try:
+        from fast_flights import FlightQuery, Passengers, create_query
+        ms = cfg.get("max_stops")
+        q = create_query(
+            flights=[
+                FlightQuery(date=str(dep), from_airport=origin, to_airport=dest, max_stops=ms),
+                FlightQuery(date=str(ret), from_airport=dest, to_airport=origin, max_stops=ms),
+            ],
+            trip="round-trip", seat=cfg.get("seat", "economy"),
+            passengers=Passengers(adults=int(cfg.get("adults", 1))),
+            currency=currency, language="en-US",
+        )
+        return q.url()
+    except Exception:  # library missing or changed: fall back to a plain text search
+        q = f"Flights from {origin} to {dest} on {dep} through {ret}"
+        return "https://www.google.com/travel/flights?" + urllib.parse.urlencode({"q": q, "curr": currency})
 
 
 # ───────────────────────── providers ─────────────────────────
@@ -204,7 +220,7 @@ def run(cfg, demo=False):
             # only notify on drops/targets, not on "new low" by itself (too chatty)
             if why and (len(why) > 1 or why[0] != "new low"):
                 alerts.append((p, f"{label}: {cur} {p:,} — {', '.join(why)} [{offer['airlines']}]",
-                               google_flights_url(origin, dest, dep, ret, cur)))
+                               google_flights_url(origin, dest, dep, ret, cur, cfg)))
         if not demo and i < len(combos):
             time.sleep(cfg.get("pause_seconds", 4) + random.uniform(0, 3))
 
@@ -270,7 +286,7 @@ def build_report(cfg):
         p, (_, d, r) = min(mine)
         hist_low = min(v[0] for k, h in by.items() if k[0] == o and (k[1], k[2]) in wanted for v in h.values())
         dd, rr = dt.date.fromisoformat(d), dt.date.fromisoformat(r)
-        tiles.append(f"""<a class="tile" href="{html.escape(google_flights_url(o, dest, dd, rr, cur))}" target="_blank">
+        tiles.append(f"""<a class="tile" href="{html.escape(google_flights_url(o, dest, dd, rr, cur, cfg))}" target="_blank">
           <div class="tlabel"><span class="sw" style="background:{SERIES[i % 2]}"></span>Cheapest from {o} now</div>
           <div class="big">{cur} {p:,}</div>
           <div class="sub">{dd:%a %b %d} → {rr:%a %b %d} · {(rr - dd).days} nights · {html.escape(latest[(o, d, r)][1])}</div>
@@ -309,9 +325,9 @@ def build_report(cfg):
                 bg = shade(p)
                 ink = "#fff" if SEQ.index(bg) >= 3 else "#0b0b0b"
                 tip = f"{o} {dd:%a %b %d} → {rr:%a %b %d} ({n} nights) · {cur} {p:,} · {v[1]} · {v[2]} stop(s)"
-                url = google_flights_url(o, dest, dd, rr, cur)
-                tds.append(f'<td style="background:{bg};color:{ink}" title="{html.escape(tip)}">'
-                           f'<a href="{html.escape(url)}" target="_blank" style="color:{ink}">{p:,}</a>{delta}</td>')
+                url = google_flights_url(o, dest, dd, rr, cur, cfg)
+                tds.append(f'<td style="background:{bg}"><a class="cell" href="{html.escape(url)}" target="_blank" rel="noopener" '
+                           f'title="{html.escape(tip + " — open in Google Flights")}" style="color:{ink}">{p:,}{delta}</a></td>')
             trs.append(f"<tr><th>{dd:%a %b %d}</th>{''.join(tds)}</tr>")
         head = "".join(f"<th>{dt.date.fromisoformat(r):%a}<br>{dt.date.fromisoformat(r):%b %d}</th>" for r in rets)
         grids.append(f'<div class="card"><h2>{o} → {dest}</h2><div class="scroll"><table class="grid"><tr><th class="corner">Depart ↓<br>Return →</th>{head}</tr>{"".join(trs)}</table></div></div>')
@@ -389,7 +405,7 @@ main{{max-width:960px;margin:0 auto;padding:24px 16px 48px}}h1{{font-size:24px;m
 .grids{{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}}
 .grid{{border-collapse:separate;border-spacing:2px;width:100%;font-variant-numeric:tabular-nums}}
 .grid th{{font-weight:500;font-size:13px;color:var(--ink2);text-align:left;padding:4px 6px;white-space:nowrap}}
-.grid td{{border-radius:4px;padding:6px 8px;text-align:right;white-space:nowrap}}.grid td a{{text-decoration:none;font-weight:600}}
+.grid td{{border-radius:4px;padding:0;text-align:right;white-space:nowrap}}.grid td a.cell{{display:block;padding:6px 8px;border-radius:4px;text-decoration:none;font-weight:600;outline-offset:-2px}}.grid td a.cell:hover,.grid td a.cell:focus-visible{{outline:2px solid var(--ink)}}.grid td.na{{padding:6px 8px}}
 .scroll{{overflow-x:auto}}.grid th.corner{{font-size:11px;line-height:1.3}}.grid td.na{{color:var(--ink2);background:transparent}}
 .d{{font-size:11px;margin-left:6px;padding:0 4px;border-radius:3px;background:var(--card)}}.d.dn{{color:var(--dn)}}.d.up{{color:var(--up)}}
 .trend{{width:100%;height:auto}}.gridl{{stroke:var(--line);stroke-width:1}}.ax{{fill:var(--ink2);font-size:11px}}.lbl{{fill:var(--ink);font-size:12px;font-weight:600}}
@@ -401,7 +417,7 @@ section{{margin-top:24px}}
 <div class="muted">Round trip to {dest} · {adults} adult · stops {stops} · prices in {cur} · updated {updated} · {nruns} check(s) so far</div>
 <div class="tiles">{tiles}</div>
 <section><div class="grids">{grids}</div>
-<div class="key">Pricier <i style="background:#cde2fb"></i><i style="background:#9ec5f4"></i><i style="background:#6da7ec"></i><i style="background:#3987e5"></i><i style="background:#256abf"></i><i style="background:#184f95"></i> Cheaper · ▼▲ change since previous check · click any fare to open Google Flights</div></section>
+<div class="key">Pricier <i style="background:#cde2fb"></i><i style="background:#9ec5f4"></i><i style="background:#6da7ec"></i><i style="background:#3987e5"></i><i style="background:#256abf"></i><i style="background:#184f95"></i> Cheaper · ▼▲ change since previous check · click any fare to open that exact search in Google Flights</div></section>
 <section class="card"><h2>Cheapest fare over time</h2>{chart}</section>
 </main></body></html>"""
 
