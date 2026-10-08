@@ -1,32 +1,32 @@
-Checking 30 itineraries (2026-10-08T17:32:26+00:00)
-  [1/30] SEA→CTS Feb 10–Feb 20: ERROR ModuleNotFoundError: No module named 'typing_extensions'
-  [2/30] SEA→CTS Feb 10–Feb 21: ERROR ModuleNotFoundError: No module named 'typing_extensions'
-  [3/30] SEA→CTS Feb 10–Feb 22: ERROR ModuleNotFoundError: No module named 'typing_extensions'
-  [4/30] SEA→CTS Feb 11–Feb 20: ERROR ModuleNotFoundError: No module named 'typing_extensions'
-  [5/30] SEA→CTS Feb 11–Feb 21: ERROR ModuleNotFoundError: No module named 'typing_extensions'
-  [6/30] SEA→CTS Feb 11–Feb 22: ERROR ModuleNotFoundError: No module named 'typing_extensions'
-  [7/30] SEA→CTS Feb 12–Feb 20: ERROR ModuleNotFoundError: No module named 'typing_extensions'
-  [8/30] SEA→CTS Feb 12–Feb 21: ERROR ModuleNotFoundError: No module named 'typing_extensions'
-  [9/30] SEA→CTS Feb 12–Feb 22: ERROR ModuleNotFoundError: No module named 'typing_extensions'
-  [10/30] SEA→CTS Feb 13–Feb 20: ERROR ModuleNotFoundError: No module named 'typing_extensions'
-  [11/30] SEA→CTS Feb 13–Feb 21: ERROR ModuleNotFoundError: No module named 'typing_extensions'
-  [12/30] SEA→CTS Feb 13–Feb 22: ERROR ModuleNotFoundError: No module named 'typing_extensions'
-  [13/30] SEA→CTS Feb 14–Feb 20: ERROR ModuleNotFoundError: No module named 'typing_extensions'
-  [14/30] SEA→CTS Feb 14–Feb 21: ERROR ModuleNotFoundError: No module named 'typing_extensions'
-  [15/30] SEA→CTS Feb 14–Feb 22: ERROR ModuleNotFoundError: No module named 'typing_extensions'
-  [16/30] YVR→CTS Feb 10–Feb 20: ERROR ModuleNotFoundError: No module named 'typing_extensions'
-  [17/30] YVR→CTS Feb 10–Feb 21: ERROR ModuleNotFoundError: No module named 'typing_extensions'
-  [18/30] YVR→CTS Feb 10–Feb 22: ERROR ModuleNotFoundError: No module named 'typing_extensions'
-  [19/30] YVR→CTS Feb 11–Feb 20: ERROR ModuleNotFoundError: No module named 'typing_extensions'
-  [20/30] YVR→CTS Feb 11–Feb 21: ERROR ModuleNotFoundError: No module named 'typing_extensions'
-  [21/30] YVR→CTS Feb 11–Feb 22: ERROR ModuleNotFoundError: No module named 'typing_extensions'
-  [22/30] YVR→CTS Feb 12–Feb 20: ERROR ModuleNotFoundError: No module named 'typing_extensions'
-  [23/30] YVR→CTS Feb 12–Feb 21: ERROR ModuleNotFoundError: No module named 'typing_extensions'
-  [24/30] YVR→CTS Feb 12–Feb 22: ERROR ModuleNotFoundError: No module named 'typing_extensions'
-  [25/30] YVR→CTS Feb 13–Feb 20: ERROR ModuleNotFoundError: No module named 'typing_extensions'
-  [26/30] YVR→CTS Feb 13–Feb 21: ERROR ModuleNotFoundError: No module named 'typing_extensions'
-  [27/30] YVR→CTS Feb 13–Feb 22: ERROR ModuleNotFoundError: No module named 'typing_extensions'
-  [28/30] YVR→CTS Feb 14–Feb 20: ERROR ModuleNotFoundError: No module named 'typing_extensions'
-  [29/30] YVR→CTS Feb 14–Feb 21: ERROR ModuleNotFoundError: No module named 'typing_extensions'
-  [30/30] YVR→CTS Feb 14–Feb 22: ERROR ModuleNotFoundError: No module named 'typing_extensions'
-Done: 0 prices saved, 30 errors.
+Checking 30 itineraries (2026-10-08T17:35:47+00:00)
+  [1/30] SEA→CTS Feb 10–Feb 20: USD 1,256  JAL
+  [2/30] SEA→CTS Feb 10–Feb 21: USD 961  Cathay Pacific
+  [3/30] SEA→CTS Feb 10–Feb 22: USD 924  Cathay Pacific
+  [4/30] SEA→CTS Feb 11–Feb 20: USD 1,125  Delta, Korean Air
+  [5/30] SEA→CTS Feb 11–Feb 21: USD 1,125  Delta, Korean Air
+  [6/30] SEA→CTS Feb 11–Feb 22: USD 1,129  Korean Air
+  [7/30] SEA→CTS Feb 12–Feb 20: USD 1,129  Korean Air
+  [8/30] SEA→CTS Feb 12–Feb 21: USD 1,125  Delta, Korean Air
+  [9/30] SEA→CTS Feb 12–Feb 22: USD 1,129  Korean Air
+  [10/30] SEA→CTS Feb 13–Feb 20: USD 1,125  Delta, Korean Air
+  [11/30] SEA→CTS Feb 13–Feb 21: USD 1,125  Delta, Korean Air
+  [12/30] SEA→CTS Feb 13–Feb 22: USD 1,383  Cathay Pacific
+  [13/30] SEA→CTS Feb 14–Feb 20: USD 1,117  Delta, Korean Air
+  [14/30] SEA→CTS Feb 14–Feb 21: USD 1,117  Delta, Korean Air
+  [15/30] SEA→CTS Feb 14–Feb 22: USD 1,167  ANA
+  [16/30] YVR→CTS Feb 10–Feb 20: USD 1,058  Cathay Pacific
+  [17/30] YVR→CTS Feb 10–Feb 21: USD 1,216  Korean Air
+  [18/30] YVR→CTS Feb 10–Feb 22: USD 1,034  Cathay Pacific
+  [19/30] YVR→CTS Feb 11–Feb 20: USD 1,058  Cathay Pacific
+  [20/30] YVR→CTS Feb 11–Feb 21: USD 1,034  Cathay Pacific
+  [21/30] YVR→CTS Feb 11–Feb 22: USD 1,034  Cathay Pacific
+  [22/30] YVR→CTS Feb 12–Feb 20: USD 1,069  Air Canada, ANA
+  [23/30] YVR→CTS Feb 12–Feb 21: USD 1,251  Korean Air
+  [24/30] YVR→CTS Feb 12–Feb 22: USD 1,193  JAL, Jetstar
+  [25/30] YVR→CTS Feb 13–Feb 20: USD 1,153  Cathay Pacific
+  [27/30] YVR→CTS Feb 13–Feb 22: USD 1,128  Cathay Pacific
+  [28/30] YVR→CTS Feb 14–Feb 20: USD 1,251  Korean Air
+  [29/30] YVR→CTS Feb 14–Feb 21: USD 1,251  Korean Air
+  [30/30] YVR→CTS Feb 14–Feb 22: USD 1,194  JAL
+Done: 29 prices saved, 0 errors.
+Report written: /home/runner/work/sapporo-fare-watch/sapporo-fare-watch/report.html
