@@ -22,12 +22,14 @@ import time
 import urllib.parse
 import urllib.request
 import zlib
+from zoneinfo import ZoneInfo
 from pathlib import Path
 
 import yaml
 
 HERE = Path(__file__).resolve().parent
 DB_PATH = HERE / "prices.db"
+TZ = ZoneInfo("America/Los_Angeles")  # overridden by `timezone` in config.yaml
 REPORT_PATH = HERE / "report.html"
 
 
@@ -40,6 +42,8 @@ def load_config(path: Path) -> dict:
         if isinstance(cfg.get(k), str):
             cfg[k] = dt.date.fromisoformat(cfg[k])
     cfg.setdefault("alerts", {})
+    global TZ
+    TZ = ZoneInfo(cfg.get("timezone", "America/Los_Angeles"))
     return cfg
 
 
@@ -343,7 +347,7 @@ def build_report(cfg):
 
     REPORT_PATH.write_text(PAGE.format(
         title="Sapporo Fare Watch", dest=dest, cur=cur,
-        updated=dt.datetime.fromisoformat(latest_run).astimezone().strftime("%a %b %d, %I:%M %p"),
+        updated=dt.datetime.fromisoformat(latest_run).astimezone(TZ).strftime("%a %b %d, %I:%M %p"),
         nruns=len(runs), tiles="".join(tiles), grids="".join(grids), chart=chart,
         stops=("any" if cfg.get("max_stops") is None else f"≤{cfg['max_stops']}"),
         adults=cfg.get("adults", 1)))
@@ -371,7 +375,7 @@ def trend_svg(trend, origins, cur):
                    f'<text x="{L - 8}" y="{Y(v) + 4:.1f}" class="ax" text-anchor="end">{v:,.0f}</text>')
     for t in (times[0], times[-1]):
         out.append(f'<text x="{X(t):.1f}" y="{H - 8}" class="ax" text-anchor="middle">'
-                   f'{dt.datetime.fromisoformat(t).astimezone():%b %d}</text>')
+                   f'{dt.datetime.fromisoformat(t).astimezone(TZ):%b %d}</text>')
     for i, o in enumerate(origins):
         s = trend[o]
         if not s:
@@ -381,7 +385,7 @@ def trend_svg(trend, origins, cur):
         out.append(f'<path d="{d}" fill="none" stroke="{col}" stroke-width="2" stroke-linejoin="round"/>')
         for t, v in s:
             out.append(f'<circle cx="{X(t):.1f}" cy="{Y(v):.1f}" r="4" fill="{col}" stroke="var(--bg)" stroke-width="2">'
-                       f'<title>{o} · {dt.datetime.fromisoformat(t).astimezone():%b %d %H:%M} · {cur} {v:,}</title></circle>')
+                       f'<title>{o} · {dt.datetime.fromisoformat(t).astimezone(TZ):%b %d %H:%M} · {cur} {v:,}</title></circle>')
         lt, lv = s[-1]
         out.append(f'<text x="{X(lt) + 8:.1f}" y="{Y(lv) + 4:.1f}" class="lbl">{o} {lv:,}</text>')
     out.append("</svg>")

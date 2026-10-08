@@ -15,6 +15,7 @@ return_to:   2027-02-22
 adults: 1
 seat: economy                # economy / premium-economy / business / first
 max_stops: 1                 # 0 = nonstop only (none exist on these routes), 1, 2, or null for any
+timezone: America/Los_Angeles  # times shown in the report
 currency: USD                # one currency for both airports so prices compare fairly (use CAD if you prefer)
 
 # Data source: "google" (free, scrapes Google Flights via fast-flights)
