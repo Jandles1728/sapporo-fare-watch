@@ -1,20 +1,68 @@
-Checking 18 itineraries (2026-10-08T20:11:44+00:00)
-  [1/18] SEA→CTS Feb 12–Feb 20: USD 1,129 (+0)  Korean Air
-  [2/18] SEA→CTS Feb 12–Feb 21: USD 1,125 (+0)  Delta, Korean Air
-  [3/18] SEA→CTS Feb 12–Feb 22: USD 1,129 (+0)  Korean Air
-  [4/18] SEA→CTS Feb 13–Feb 20: USD 1,125 (+0)  Delta, Korean Air
-  [5/18] SEA→CTS Feb 13–Feb 21: USD 1,125 (+0)  Delta, Korean Air
-  [6/18] SEA→CTS Feb 13–Feb 22: USD 1,383 (+0)  Cathay Pacific
-  [7/18] SEA→CTS Feb 14–Feb 20: USD 1,117 (+0)  Delta, Korean Air
-  [8/18] SEA→CTS Feb 14–Feb 21: USD 1,117 (+0)  Delta, Korean Air
-  [9/18] SEA→CTS Feb 14–Feb 22: USD 1,167 (+0)  ANA
-  [10/18] YVR→CTS Feb 12–Feb 20: USD 1,070 (+0)  Air Canada, ANA
-  [11/18] YVR→CTS Feb 12–Feb 21: USD 1,252 (+0)  Korean Air
-  [12/18] YVR→CTS Feb 12–Feb 22: USD 1,194 (+0)  JAL, Jetstar
-  [13/18] YVR→CTS Feb 13–Feb 20: USD 1,154 (+0)  Cathay Pacific
-  [14/18] YVR→CTS Feb 13–Feb 21: USD 1,129 (+0)  Cathay Pacific
-  [15/18] YVR→CTS Feb 13–Feb 22: USD 1,129 (+0)  Cathay Pacific
-  [17/18] YVR→CTS Feb 14–Feb 21: USD 1,252 (+0)  Korean Air
-  [18/18] YVR→CTS Feb 14–Feb 22: USD 1,195 (+0)  JAL
-Done: 17 prices saved, 0 errors.
+Running 68 searches (2026-10-08T20:19:26+00:00)
+  [1/68]    one-way  HND→SEA Feb 20: USD 767  EVA Air
+  [2/68]    one-way  HND→SEA Feb 21: USD 817  China Airlines
+  [3/68]    one-way  HND→SEA Feb 22: USD 750  China Airlines
+  [4/68]    one-way  HND→YVR Feb 20: USD 896  EVA Air
+  [5/68]    one-way  HND→YVR Feb 21: USD 782  China Airlines
+  [6/68]    one-way  HND→YVR Feb 22: USD 737  China Airlines
+  [7/68]    one-way  NRT→SEA Feb 20: USD 767  EVA Air
+  [8/68]    one-way  NRT→SEA Feb 21: USD 778  Korean Air
+  [9/68]    one-way  NRT→SEA Feb 22: USD 719  China Airlines
+  [10/68]    one-way  NRT→YVR Feb 20: USD 744  Trinity Airways
+  [11/68]    one-way  NRT→YVR Feb 21: USD 725  EVA Air
+  [12/68]    one-way  NRT→YVR Feb 22: USD 717  Trinity Airways
+  [13/68]    one-way  SEA→CTS Feb 12: USD 539  Delta, Korean Air
+  [14/68]    one-way  SEA→CTS Feb 13: USD 539  Delta, Korean Air
+  [15/68]    one-way  SEA→CTS Feb 14: USD 491  Korean Air
+  [17/68]    one-way  YVR→CTS Feb 12: USD 686  JAL, Jetstar
+  [18/68]    one-way  YVR→CTS Feb 13: USD 686  JAL, Jetstar
+  [19/68]    one-way  YVR→CTS Feb 14: USD 711  ANA
+  [21/68] multi-city  SEA→CTS Feb 12  +  HND→SEA Feb 20: ERROR IndexError: list index out of range
+  [22/68] multi-city  SEA→CTS Feb 12  +  HND→SEA Feb 21: ERROR IndexError: list index out of range
+  [23/68] multi-city  SEA→CTS Feb 12  +  HND→SEA Feb 22: ERROR IndexError: list index out of range
+  [24/68] multi-city  SEA→CTS Feb 12  +  NRT→SEA Feb 20: ERROR IndexError: list index out of range
+  [25/68] multi-city  SEA→CTS Feb 12  +  NRT→SEA Feb 21: ERROR IndexError: list index out of range
+  [26/68] multi-city  SEA→CTS Feb 12  +  NRT→SEA Feb 22: ERROR IndexError: list index out of range
+  [27/68] multi-city  SEA→CTS Feb 13  +  HND→SEA Feb 20: ERROR IndexError: list index out of range
+  [28/68] multi-city  SEA→CTS Feb 13  +  HND→SEA Feb 21: ERROR IndexError: list index out of range
+  [29/68] multi-city  SEA→CTS Feb 13  +  HND→SEA Feb 22: ERROR IndexError: list index out of range
+  [30/68] multi-city  SEA→CTS Feb 13  +  NRT→SEA Feb 20: ERROR IndexError: list index out of range
+  [31/68] multi-city  SEA→CTS Feb 13  +  NRT→SEA Feb 21: ERROR IndexError: list index out of range
+  [32/68] multi-city  SEA→CTS Feb 13  +  NRT→SEA Feb 22: ERROR IndexError: list index out of range
+  [33/68] multi-city  SEA→CTS Feb 14  +  HND→SEA Feb 20: ERROR IndexError: list index out of range
+  [34/68] multi-city  SEA→CTS Feb 14  +  HND→SEA Feb 21: ERROR IndexError: list index out of range
+  [35/68] multi-city  SEA→CTS Feb 14  +  HND→SEA Feb 22: ERROR IndexError: list index out of range
+  [36/68] multi-city  SEA→CTS Feb 14  +  NRT→SEA Feb 20: ERROR IndexError: list index out of range
+  [37/68] multi-city  SEA→CTS Feb 14  +  NRT→SEA Feb 21: ERROR IndexError: list index out of range
+  [38/68] multi-city  SEA→CTS Feb 14  +  NRT→SEA Feb 22: ERROR IndexError: list index out of range
+  [39/68] multi-city  SEA→CTS Feb 15  +  HND→SEA Feb 20: ERROR IndexError: list index out of range
+  [40/68] multi-city  SEA→CTS Feb 15  +  HND→SEA Feb 21: ERROR IndexError: list index out of range
+  [41/68] multi-city  SEA→CTS Feb 15  +  HND→SEA Feb 22: ERROR IndexError: list index out of range
+  [42/68] multi-city  SEA→CTS Feb 15  +  NRT→SEA Feb 20: ERROR IndexError: list index out of range
+  [43/68] multi-city  SEA→CTS Feb 15  +  NRT→SEA Feb 21: ERROR IndexError: list index out of range
+  [44/68] multi-city  SEA→CTS Feb 15  +  NRT→SEA Feb 22: ERROR IndexError: list index out of range
+  [45/68] multi-city  YVR→CTS Feb 12  +  HND→YVR Feb 20: ERROR IndexError: list index out of range
+  [46/68] multi-city  YVR→CTS Feb 12  +  HND→YVR Feb 21: ERROR IndexError: list index out of range
+  [47/68] multi-city  YVR→CTS Feb 12  +  HND→YVR Feb 22: ERROR IndexError: list index out of range
+  [48/68] multi-city  YVR→CTS Feb 12  +  NRT→YVR Feb 20: ERROR IndexError: list index out of range
+  [49/68] multi-city  YVR→CTS Feb 12  +  NRT→YVR Feb 21: ERROR IndexError: list index out of range
+  [50/68] multi-city  YVR→CTS Feb 12  +  NRT→YVR Feb 22: ERROR IndexError: list index out of range
+  [51/68] multi-city  YVR→CTS Feb 13  +  HND→YVR Feb 20: ERROR IndexError: list index out of range
+  [52/68] multi-city  YVR→CTS Feb 13  +  HND→YVR Feb 21: ERROR IndexError: list index out of range
+  [53/68] multi-city  YVR→CTS Feb 13  +  HND→YVR Feb 22: ERROR IndexError: list index out of range
+  [54/68] multi-city  YVR→CTS Feb 13  +  NRT→YVR Feb 20: ERROR IndexError: list index out of range
+  [55/68] multi-city  YVR→CTS Feb 13  +  NRT→YVR Feb 21: ERROR IndexError: list index out of range
+  [56/68] multi-city  YVR→CTS Feb 13  +  NRT→YVR Feb 22: ERROR IndexError: list index out of range
+  [57/68] multi-city  YVR→CTS Feb 14  +  HND→YVR Feb 20: ERROR IndexError: list index out of range
+  [58/68] multi-city  YVR→CTS Feb 14  +  HND→YVR Feb 21: ERROR IndexError: list index out of range
+  [59/68] multi-city  YVR→CTS Feb 14  +  HND→YVR Feb 22: ERROR IndexError: list index out of range
+  [60/68] multi-city  YVR→CTS Feb 14  +  NRT→YVR Feb 20: ERROR IndexError: list index out of range
+  [61/68] multi-city  YVR→CTS Feb 14  +  NRT→YVR Feb 21: ERROR IndexError: list index out of range
+  [62/68] multi-city  YVR→CTS Feb 14  +  NRT→YVR Feb 22: ERROR IndexError: list index out of range
+  [63/68] multi-city  YVR→CTS Feb 15  +  HND→YVR Feb 20: ERROR IndexError: list index out of range
+  [65/68] multi-city  YVR→CTS Feb 15  +  HND→YVR Feb 22: ERROR IndexError: list index out of range
+  [66/68] multi-city  YVR→CTS Feb 15  +  NRT→YVR Feb 20: ERROR IndexError: list index out of range
+  [67/68] multi-city  YVR→CTS Feb 15  +  NRT→YVR Feb 21: ERROR IndexError: list index out of range
+  [68/68] multi-city  YVR→CTS Feb 15  +  NRT→YVR Feb 22: ERROR IndexError: list index out of range
+Done: 18 prices saved, 47 errors.
 Report written: /home/runner/work/sapporo-fare-watch/sapporo-fare-watch/report.html
