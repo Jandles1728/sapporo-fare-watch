@@ -14,13 +14,16 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install -r requirements.txt
-      - run: python flight_watch.py run
+      - name: Check fares
+        shell: bash
+        run: set -o pipefail; python flight_watch.py run 2>&1 | tee last_run.log
         env:
           SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
       - name: Save history
+        if: always()
         run: |
           git config user.name "fare-bot"
           git config user.email "fare-bot@users.noreply.github.com"
-          git add prices.db report.html
+          git add -f last_run.log; git add prices.db report.html 2>/dev/null || true
           git commit -m "Fare check $(date -u +%F_%H%M)" || echo "no changes"
           git push
