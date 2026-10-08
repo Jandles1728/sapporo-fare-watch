@@ -24,6 +24,6 @@ jobs:
         run: |
           git config user.name "fare-bot"
           git config user.email "fare-bot@users.noreply.github.com"
-          git add -f last_run.log; git add prices.db report.html 2>/dev/null || true
+          for f in last_run.log prices.db report.html; do [ -f "$f" ] && git add "$f"; done
           git commit -m "Fare check $(date -u +%F_%H%M)" || echo "no changes"
           git push
