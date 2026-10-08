@@ -140,6 +140,8 @@ def search_google(cfg, search):
         currency=cfg.get("currency", "USD"),
         language="en-US",
     )
+    if kind == "mc":
+        return _google_multicity(cfg, q.flights if hasattr(q, "flights") else None, legs)
     try:
         results = get_flights(q)
     except Exception as e:
@@ -152,6 +154,40 @@ def search_google(cfg, search):
     best = min(offers, key=lambda f: f.price)
     return {"price": int(best.price), "airlines": ", ".join(dict.fromkeys(best.airlines)),
             "stops": max(len(best.flights) - 1, 0)}
+
+
+def _google_multicity(cfg, _unused, legs):
+    """One multi-city ticket: ask Google's shopping service for the bundled total price.
+
+    The plain results page can't be parsed for multi-city trips, so this uses the
+    faster-flights shopping call (one request) and falls back to its slower chained
+    search (one request per leg plus one) if that internal call ever changes.
+    """
+    import fast_flights as ff
+    ms = cfg.get("max_stops")
+    fq = [ff.FlightQuery(date=d, from_airport=a, to_airport=b, max_stops=ms) for a, b, d in legs]
+    adults = int(cfg.get("adults", 1))
+    cur, seat = cfg.get("currency", "USD"), cfg.get("seat", "economy")
+    price, offers = None, []
+    try:
+        from fast_flights.fetcher import _build_default_client
+        from fast_flights.shopping import fetch_shopping_results
+        _, price, _, found = fetch_shopping_results(
+            client=_build_default_client(), legs=fq, tokens=[], language="en-US",
+            currency=cur, seat=seat, passenger_counts=(adults, 0, 0, 0))
+        offers = [f for f in (found or []) if getattr(f, "price", 0)]
+    except ImportError:
+        chained = ff.get_flights_multicity_chained(
+            fq, language="en-US", currency=cur, seat=seat, passengers=ff.Passengers(adults=adults))
+        price = chained[0].total_price if chained else None
+        offers = [f for f in (chained[0].flights or []) if getattr(f, "price", 0)] if chained else []
+    if offers:
+        best = min(offers, key=lambda f: f.price)
+        return {"price": int(price or best.price), "airlines": ", ".join(dict.fromkeys(best.airlines)),
+                "stops": max(len(best.flights) - 1, 0)}
+    if price:
+        return {"price": int(price), "airlines": "", "stops": 0}
+    return None
 
 
 SERP_STOPS = {None: 0, 0: 1, 1: 2, 2: 3}
