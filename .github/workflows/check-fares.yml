@@ -1,0 +1,26 @@
+name: Check Sapporo fares
+on:
+  schedule:
+    - cron: "17 14,2 * * *"   # ~7am and ~7pm Pacific
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -r requirements.txt
+      - run: python flight_watch.py run
+        env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+      - name: Save history
+        run: |
+          git config user.name "fare-bot"
+          git config user.email "fare-bot@users.noreply.github.com"
+          git add prices.db report.html
+          git commit -m "Fare check $(date -u +%F_%H%M)" || echo "no changes"
+          git push

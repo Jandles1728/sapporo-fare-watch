@@ -1,0 +1,29 @@
+# Flight Watch — Sapporo snowboard trip
+# Edit this file, then run:  python flight_watch.py run
+
+origins: [SEA, YVR]          # Seattle-Tacoma, Vancouver
+destination: CTS             # Sapporo New Chitose
+
+# Every outbound date in this window is paired with every return date in the return window.
+depart_from: 2027-02-10
+depart_to:   2027-02-14
+return_from: 2027-02-20
+return_to:   2027-02-22
+# Prefer fixed trip lengths instead? Delete return_from/return_to and use e.g.:
+# trip_lengths: [7, 10]
+
+adults: 1
+seat: economy                # economy / premium-economy / business / first
+max_stops: 1                 # 0 = nonstop only (none exist on these routes), 1, 2, or null for any
+currency: USD                # one currency for both airports so prices compare fairly (use CAD if you prefer)
+
+# Data source: "google" (free, scrapes Google Flights via fast-flights)
+#              "serpapi" (more reliable; needs SERPAPI_KEY env var, 250 free searches/month)
+provider: google
+pause_seconds: 4             # politeness delay between searches (random jitter added)
+
+alerts:
+  target_price: 900          # alert whenever any itinerary is at or below this
+  drop_percent: 8            # alert when a date combo drops at least this % since the last check
+  # Push notifications to your phone via ntfy.sh (free app). Pick a hard-to-guess topic name.
+  ntfy_topic: ""             # e.g. "andrew-sapporo-fares-7h3k"
