@@ -4,6 +4,9 @@ Checks round-trip fares for every departure date × return date in your windows,
 Seattle and Vancouver, saves every result to `prices.db`, alerts you on drops, and builds
 `report.html` (price heatmap per airport, change since last check, cheapest-over-time chart).
 
+**Live report:** https://jandles1728.github.io/sapporo-fare-watch/ — refreshed after every
+check. Click any fare to open that exact search in Google Flights.
+
 ## Setup (once)
 
 Needs Python 3.10+.
@@ -28,7 +31,10 @@ block you.
 ## Phone alerts (optional, free)
 
 1. Install the **ntfy** app (iOS/Android) and subscribe to a hard-to-guess topic name.
-2. Put that name in `config.yaml` → `alerts.ntfy_topic`.
+   Friends can subscribe to the same topic to get the same alerts.
+2. On GitHub: repo **Settings → Secrets and variables → Actions → New repository secret**,
+   name `NTFY_TOPIC`, value = your topic. (Running locally? Set the `NTFY_TOPIC` environment
+   variable, or put it in `config.yaml` → `alerts.ntfy_topic` — but not in a public repo.)
 
 You get one push per run when a fare is at/below `target_price` or has dropped by
 `drop_percent` since the last check. Tapping it opens that search in Google Flights.
@@ -43,10 +49,11 @@ You get one push per run when a fare is at/below `target_price` or has dropped b
 **Windows** — Task Scheduler → Create Basic Task → Daily, repeat every 12 hours →
 Program: `python`, Arguments: `flight_watch.py run`, Start in: the folder path.
 
-**GitHub Actions (no computer needed)** — push this folder to a private GitHub repo; the
-included `.github/workflows/check-fares.yml` runs twice a day and commits `prices.db` and
-`report.html` back. Download `report.html` from the repo to view it. Google sometimes
-blocks GitHub's servers; if runs start erroring, switch to SerpApi (below).
+**GitHub Actions (no computer needed)** — this is how it runs now. The included
+`.github/workflows/check-fares.yml` runs twice a day, commits `prices.db`, `report.html` and
+`last_run.log` back, and publishes the report to GitHub Pages (Settings → Pages → Source:
+GitHub Actions). Run it on demand from Actions → Check Sapporo fares → Run workflow. Google
+sometimes blocks GitHub's servers; if runs start erroring, switch to SerpApi (below).
 
 ## Data sources
 

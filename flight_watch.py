@@ -236,7 +236,7 @@ def run(cfg, demo=False):
 
 
 def notify(cfg, alerts):
-    topic = cfg["alerts"].get("ntfy_topic")
+    topic = os.environ.get("NTFY_TOPIC") or cfg["alerts"].get("ntfy_topic")
     if not topic:
         return
     body = "\n".join(msg for _, msg, _ in alerts[:10])
@@ -248,7 +248,7 @@ def notify(cfg, alerts):
                  "Tags": "airplane,snowflake", "Click": alerts[0][2]})
     try:
         urllib.request.urlopen(req, timeout=20)
-        print(f"Notification sent to ntfy.sh/{topic}")
+        print("Notification sent")
     except Exception as e:
         print(f"Notification failed: {e}")
 
@@ -390,7 +390,7 @@ def trend_svg(trend, origins, cur):
     return f'<div class="legend">{legend}</div>' + "".join(out)
 
 
-PAGE = """<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+PAGE = """<!doctype html><html><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{title}</title><style>
 :root{{--bg:#fcfcfb;--card:#fff;--ink:#0b0b0b;--ink2:#52514e;--line:#e6e5e0;--s1:#2a78d6;--s2:#eb6834;--dn:#0a7f0a;--up:#b42f2f}}
 @media (prefers-color-scheme:dark){{:root{{--bg:#1a1a19;--card:#222220;--ink:#fff;--ink2:#c3c2b7;--line:#383835;--s1:#3987e5;--s2:#d95926;--dn:#5fd35f;--up:#ff8a8a}}}}

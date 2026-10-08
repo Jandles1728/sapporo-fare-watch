@@ -25,5 +25,6 @@ pause_seconds: 4             # politeness delay between searches (random jitter 
 alerts:
   target_price: 900          # alert whenever any itinerary is at or below this
   drop_percent: 8            # alert when a date combo drops at least this % since the last check
-  # Push notifications to your phone via ntfy.sh (free app). Pick a hard-to-guess topic name.
-  ntfy_topic: ""             # e.g. "andrew-sapporo-fares-7h3k"
+  # Push notifications via ntfy.sh (free app). Keep the topic name out of this public file:
+  # set it as the NTFY_TOPIC secret in GitHub (Settings → Secrets and variables → Actions).
+  ntfy_topic: ""
