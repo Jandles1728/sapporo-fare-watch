@@ -27,7 +27,7 @@ python flight_watch.py run
 ```
 
 The current setup (4 departure dates × 3 return dates × 2 home airports × 2 Tokyo airports,
-priced as one ticket and as one-ways) is 68 searches and takes about 7 minutes because it pauses between searches so Google doesn't
+priced as one ticket and as one-ways) is 68 searches and takes about 20 minutes because it pauses between searches so Google doesn't
 block you.
 
 ## Phone alerts (optional, free)
