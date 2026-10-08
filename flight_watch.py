@@ -177,6 +177,8 @@ def run(cfg, demo=False):
         label = f"{origin}→{dest} {dep:%b %d}–{ret:%b %d}"
         try:
             offer = search(cfg, origin, dest, dep, ret)
+        except ImportError as e:
+            sys.exit(f"Setup problem, stopping: {e}. Run: pip install -r requirements.txt")
         except Exception as e:
             failed += 1
             print(f"  [{i}/{len(combos)}] {label}: ERROR {type(e).__name__}: {str(e)[:120]}")
