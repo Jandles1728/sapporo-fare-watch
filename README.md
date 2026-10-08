@@ -24,8 +24,8 @@ and do a real check:
 python flight_watch.py run
 ```
 
-The current grid (5 departure dates Feb 10–14 × 3 return dates Feb 20–22 × 2 airports =
-30 searches) takes about 3–4 minutes because it pauses between searches so Google doesn't
+The current grid (3 departure dates Feb 12–14 × 3 return dates Feb 20–22 × 2 airports =
+18 searches) takes about 2–3 minutes because it pauses between searches so Google doesn't
 block you.
 
 ## Phone alerts (optional, free)

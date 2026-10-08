@@ -5,7 +5,7 @@ origins: [SEA, YVR]          # Seattle-Tacoma, Vancouver
 destination: CTS             # Sapporo New Chitose
 
 # Every outbound date in this window is paired with every return date in the return window.
-depart_from: 2027-02-10
+depart_from: 2027-02-12
 depart_to:   2027-02-14
 return_from: 2027-02-20
 return_to:   2027-02-22
