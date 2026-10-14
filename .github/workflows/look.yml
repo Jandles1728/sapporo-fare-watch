@@ -1,0 +1,36 @@
+name: One-off fare look
+# Runs a search from a config in looks/ and saves the latest results to the "looks" branch
+# (overwritten each time).
+# Doesn't touch the main tracker, its history or the live page.
+on:
+  workflow_dispatch:
+    inputs:
+      config:
+        description: Config file
+        default: looks/sea-hnd.yaml
+      name:
+        description: Short name for the output files
+        default: sea-hnd
+permissions:
+  contents: write
+jobs:
+  look:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -r requirements.txt
+      - name: Search
+        shell: bash
+        run: set -o pipefail; python flight_watch.py run --config "${{ inputs.config }}" --name "${{ inputs.name }}" 2>&1 | tee "look-${{ inputs.name }}.log"
+      - name: Save to the looks branch
+        if: always()
+        run: |
+          git config user.name "fare-bot"
+          git config user.email "fare-bot@users.noreply.github.com"
+          git checkout -B looks
+          for f in "look-${{ inputs.name }}.log" "prices-${{ inputs.name }}.db" "report-${{ inputs.name }}.html"; do [ -f "$f" ] && git add -f "$f"; done
+          git commit -m "Look: ${{ inputs.name }} $(date -u +%F_%H%M)" || echo "no changes"
+          git push -f origin looks

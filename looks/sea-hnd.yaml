@@ -1,0 +1,19 @@
+# One-off look: Seattle ↔ Tokyo Haneda round trip, same dates as the Sapporo trip.
+# Run from GitHub: Actions → "One-off fare look" → Run workflow (config: looks/sea-hnd.yaml, name: sea-hnd)
+title: Seattle ↔ Tokyo Haneda
+origins: [SEA]
+destination: HND
+
+depart_from: 2027-02-12
+depart_to:   2027-02-15
+return_from: 2027-02-20
+return_to:   2027-02-22
+
+adults: 1
+seat: economy
+max_stops: 1
+timezone: America/Los_Angeles
+currency: USD
+provider: google
+pause_seconds: 4
+alerts: {}

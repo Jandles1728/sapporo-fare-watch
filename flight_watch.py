@@ -493,7 +493,7 @@ def build_report(cfg):
     else:
         sub, key_extra = f"Round trip to {dest}", ""
     REPORT_PATH.write_text(PAGE.format(
-        title="Sapporo Fare Watch", sub=sub, cur=cur,
+        title=cfg.get("title", "Sapporo Fare Watch"), sub=sub, cur=cur,
         updated=dt.datetime.fromisoformat(latest_run).astimezone(TZ).strftime("%a %b %d, %I:%M %p"),
         nruns=len(order), tiles="".join(tiles), grids="".join(grids), chart=chart, oneways=oneways,
         key_extra=key_extra,
@@ -588,11 +588,15 @@ def main():
     ap.add_argument("command", choices=["run", "report"])
     ap.add_argument("--config", default=str(HERE / "config.yaml"))
     ap.add_argument("--demo", action="store_true", help="use fake prices (no network)")
+    ap.add_argument("--name", help="keep this search's history and report separate, e.g. --name sea-hnd "
+                                   "writes prices-sea-hnd.db and report-sea-hnd.html")
     a = ap.parse_args()
     cfg = load_config(Path(a.config))
+    global DB_PATH, REPORT_PATH
+    if a.name:
+        DB_PATH, REPORT_PATH = HERE / f"prices-{a.name}.db", HERE / f"report-{a.name}.html"
     if a.demo:  # keep fake data away from your real history
-        global DB_PATH, REPORT_PATH
-        DB_PATH, REPORT_PATH = HERE / "demo_prices.db", HERE / "demo_report.html"
+        DB_PATH, REPORT_PATH = DB_PATH.with_name("demo_" + DB_PATH.name), REPORT_PATH.with_name("demo_" + REPORT_PATH.name)
     if a.command == "report":
         build_report(cfg)
         return 0
