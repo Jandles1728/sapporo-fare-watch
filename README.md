@@ -9,6 +9,17 @@ one wins. Saves every result to `prices.db`, alerts you on drops, and builds `re
 **Live report:** https://jandles1728.github.io/sapporo-fare-watch/ — refreshed after every
 check. Click any fare to open that exact search in Google Flights.
 
+## Second tracker: Tokyo
+
+`tokyo.yaml` tracks Seattle or Vancouver ⇄ Tokyo Haneda or Narita on the same dates, as round
+trips and as pairs of one-way tickets (including landing at one Tokyo airport and flying home
+from the other, or flying home to the other city). It keeps its own history
+(`prices-tokyo.db`) and page: https://jandles1728.github.io/sapporo-fare-watch/tokyo/
+
+```bash
+python flight_watch.py run --config tokyo.yaml --name tokyo
+```
+
 ## Setup (once)
 
 Needs Python 3.10+.

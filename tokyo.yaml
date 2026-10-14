@@ -1,0 +1,33 @@
+# Flight Watch — Tokyo (second tracker, separate from config.yaml / the Sapporo tracker)
+# Run:  python flight_watch.py run --config tokyo.yaml --name tokyo
+# Writes prices-tokyo.db and report-tokyo.html; published at /tokyo/ on the live site.
+title: Tokyo Fare Watch
+subtitle: Seattle or Vancouver ⇄ Tokyo Haneda or Narita
+destination_name: Tokyo
+
+origins: [SEA, YVR]          # leave from Seattle or Vancouver
+destinations: [HND, NRT]     # land at Tokyo Haneda or Narita
+fly_home_from: [HND, NRT]    # fly home from either Tokyo airport
+fly_home_to: [SEA, YVR]      # land back in either city (one-way tickets only)
+tickets: [round_trip, one_ways]   # price round trips and pairs of one-way tickets; cheapest wins
+
+depart_from: 2027-02-12
+depart_to:   2027-02-15
+return_from: 2027-02-20
+return_to:   2027-02-22
+
+adults: 1
+seat: economy
+max_stops: 1                 # per flight
+timezone: America/Los_Angeles
+currency: USD
+provider: google
+pause_seconds: 4
+
+links:
+  - { label: "Sapporo trip", href: "../" }
+  - { label: "Tokyo", href: "./", current: true }
+
+alerts:
+  target_price: 900
+  drop_percent: 8

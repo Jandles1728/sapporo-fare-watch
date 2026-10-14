@@ -45,8 +45,15 @@ TRIP = {"rt": "round-trip", "mc": "multi-city", "ow": "one-way"}
 def load_config(path: Path) -> dict:
     cfg = yaml.safe_load(path.read_text())
     cfg["origins"] = [o.upper() for o in cfg["origins"]]
-    cfg["destination"] = cfg["destination"].upper()
+    cfg["destinations"] = [a.upper() for a in (cfg.get("destinations") or [cfg["destination"]])]
+    cfg["destination"] = cfg["destinations"][0]
     cfg["fly_home_from"] = [a.upper() for a in (cfg.get("fly_home_from") or [])]
+    cfg["fly_home_to"] = [a.upper() for a in (cfg.get("fly_home_to") or [])]
+    if not cfg.get("tickets"):
+        cfg["tickets"] = (["multi_city"] + (["one_ways"] if cfg.get("compare_one_ways", True) else [])
+                          if cfg["fly_home_from"] else ["round_trip"])
+    # "legacy" = one destination, flying home to where you left from (the Sapporo tracker's layout)
+    cfg["_simple"] = len(cfg["destinations"]) == 1 and not cfg["fly_home_to"]
     for k in ("depart_from", "depart_to", "return_from", "return_to"):
         if isinstance(cfg.get(k), str):
             cfg[k] = dt.date.fromisoformat(cfg[k])
@@ -77,27 +84,43 @@ def key_str(search) -> str:
     return kind + ":" + "|".join(f"{a}-{b}-{d}" for a, b, d in legs)
 
 
-def options_for(cfg, origin, dep, ret):
-    """Ways to buy one trip. Each option = (label, [searches]); its price is the sum of the searches."""
-    dest, d, r = cfg["destination"], dep.isoformat(), ret.isoformat()
-    homes = cfg["fly_home_from"]
-    if not homes:  # plain round trip
-        return [("Round trip", [("rt", ((origin, dest, d), (dest, origin, r)))])]
-    opts = []
-    for h in homes:
-        opts.append((f"1 ticket · home from {h}", [("mc", ((origin, dest, d), (h, origin, r)))]))
-    if cfg.get("compare_one_ways", True):
-        for h in homes:
-            opts.append((f"2 one-ways · home from {h}",
-                         [("ow", ((origin, dest, d),)), ("ow", ((h, origin, r),))]))
-    return opts
+def options_for(cfg, o, dep, ret):
+    """Ways to buy one trip leaving from `o`. Each option = (label, tag, [searches]);
+    its price is the sum of the searches.
+
+    destinations × fly_home_from (defaults to the same airport) × fly_home_to (defaults to `o`),
+    bought as whichever ticket types are listed in `tickets`: round_trip, multi_city, one_ways.
+    """
+    d, r = dep.isoformat(), ret.isoformat()
+    dests, tickets, simple = cfg["destinations"], cfg["tickets"], cfg["_simple"]
+    pairs = [(x, h) for x in dests for h in cfg["fly_home_from"]] or [(x, x) for x in dests]
+    home_to = cfg["fly_home_to"] or [o]
+    tickets_first, one_ways = [], []
+    for x, h in pairs:
+        for home in home_to:
+            same = x == h and home == o
+            ap = x if x == h else (h if len(dests) == 1 else f"{x}/{h}")
+            to_other = f"→{home}" if home != o else ""
+            route = f"{o}→{x}, {h}→{home}"
+            if same and "round_trip" in tickets:
+                tickets_first.append(("Round trip" if simple else f"Round trip {o}⇄{x}",
+                                      "" if simple else f"RT {x}",
+                                      [("rt", ((o, x, d), (x, o, r)))]))
+            if not same and "multi_city" in tickets:
+                tickets_first.append((f"1 ticket · home from {h}" if simple else f"1 ticket · {route}",
+                                      ap + to_other, [("mc", ((o, x, d), (h, home, r)))]))
+            if "one_ways" in tickets:
+                one_ways.append((f"2 one-ways · home from {h}" if simple else f"2 one-ways · {route}",
+                                 ("2×" if simple else "2× ") + ap + to_other,
+                                 [("ow", ((o, x, d),)), ("ow", ((h, home, r),))]))
+    return tickets_first + one_ways
 
 
 def all_searches(cfg):
     seen = {}
     for o in cfg["origins"]:
         for d, r in date_combos(cfg):
-            for _, searches in options_for(cfg, o, d, r):
+            for _, _, searches in options_for(cfg, o, d, r):
                 for s in searches:
                     seen.setdefault(key_str(s), s)
     # one-ways first (fewer, and reused by many date pairs), then tickets
@@ -264,13 +287,13 @@ def best_per_trip(cfg, quotes):
     for o in cfg["origins"]:
         for d, r in date_combos(cfg):
             best = None
-            for label, searches in options_for(cfg, o, d, r):
+            for label, tag, searches in options_for(cfg, o, d, r):
                 got = [quotes.get(key_str(s)) for s in searches]
                 if not all(got):
                     continue
                 total = sum(g[0] for g in got)
                 if best is None or total < best["price"]:
-                    best = {"price": total, "label": label,
+                    best = {"price": total, "label": label, "tag": tag,
                             "parts": [(s, g[0], g[1]) for s, g in zip(searches, got)]}
             if best:
                 out[(o, d.isoformat(), r.isoformat())] = best
@@ -344,7 +367,7 @@ def notify(cfg, alerts):
         body += f"\n…and {len(alerts) - 10} more"
     req = urllib.request.Request(
         f"https://ntfy.sh/{topic}", data=body.encode(), method="POST",
-        headers={"Title": f"Sapporo fares: {len(alerts)} deal(s), best {alerts[0][0]:,}",
+        headers={"Title": f"{cfg.get('title', 'Fare Watch')}: {len(alerts)} deal(s), best {alerts[0][0]:,}",
                  "Tags": "airplane,snowflake", "Click": alerts[0][2]})
     try:
         urllib.request.urlopen(req, timeout=20)
@@ -361,14 +384,6 @@ E = html.escape
 
 def fmt_day(iso):
     return f"{dt.date.fromisoformat(iso):%a %b %d}"
-
-
-def tag_for(label):
-    if label.startswith("1 ticket"):
-        return label.split()[-1]          # HND / NRT
-    if label.startswith("2 one-ways"):
-        return "2×" + label.split()[-1]   # 2×NRT
-    return ""
 
 
 def build_report(cfg):
@@ -422,6 +437,8 @@ def build_report(cfg):
         t = 0 if hi == lo else (hi - p) / (hi - lo)
         return SEQ[min(int(t * len(SEQ)), len(SEQ) - 1)]
 
+    dests, simple, tickets = cfg["destinations"], cfg["_simple"], cfg["tickets"]
+    dest_name = cfg.get("destination_name") or "/".join(dests)
     route = f"{dest}, home from {'/'.join(homes)}" if homes else dest
     grids = []
     for o in origins:
@@ -444,35 +461,58 @@ def build_report(cfg):
                 tip = f"{o} · {fmt_day(d)} → {fmt_day(r)} · {cur} {p:,} · {b['label']}: " + \
                       " + ".join(f"{cur} {pp:,} {a}" for _, pp, a in b["parts"])
                 if len(b["parts"]) > 1:
-                    tip += " — opens the flight to Sapporo; the flight home is in the one-way table below"
+                    tip += " — opens the flight out; the flight home is in the one-way table below"
                 url = google_flights_url(b["parts"][0][0], cfg)
-                tag = tag_for(b["label"])
+                tag = b.get("tag", "")
                 meta = " ".join(x for x in (delta, f'<span class="tag">{E(tag)}</span>' if tag else "") if x)
                 tds.append(f'<td style="background:{bg}"><a class="cell" href="{E(url)}" target="_blank" rel="noopener" '
                            f'title="{E(tip)}" style="color:{ink}">{p:,}<span class="meta">{meta or "&nbsp;"}</span></a></td>')
             dd = dt.date.fromisoformat(d)
             trs.append(f"<tr><th>{dd:%a}<br>{dd:%b %d}</th>{''.join(tds)}</tr>")
         head = "".join(f"<th>{dt.date.fromisoformat(r):%a}<br>{dt.date.fromisoformat(r):%b %d}</th>" for r in rets)
-        grids.append(f'<div class="card"><h2>{o} → {route} → {o}</h2><div class="scroll"><table class="grid">'
+        h2 = f"{o} → {route} → {o}" if simple else f"Leaving {o} → {dest_name} → home to {'/'.join(cfg['fly_home_to'] or [o])}"
+        grids.append(f'<div class="card"><h2>{h2}</h2><div class="scroll"><table class="grid">'
                      f'<tr><th class="corner">Depart ↓<br>Return →</th>{head}</tr>{"".join(trs)}</table></div></div>')
 
-    # one-way legs (only for open-jaw with comparison on)
-    oneways = ""
-    if homes and cfg.get("compare_one_ways", True):
+    def price_cell(search, cls="ow"):
+        q = quotes.get(key_str(search))
+        if not q:
+            return '<td class="na">—</td>'
+        return (f'<td class="{cls}"><a href="{E(google_flights_url(search, cfg))}" target="_blank" rel="noopener" '
+                f'title="{E(q[1])} · {q[2]} stop(s)">{q[0]:,}</a></td>')
+
+    # round-trip tickets (multi-airport trackers only; the simple layout already shows them above)
+    roundtrips = ""
+    if "round_trip" in tickets and not simple:
         cards = []
         for o in origins:
-            def ow_cell(a, b, d):
-                s = ("ow", ((a, b, d),))
-                q = quotes.get(key_str(s))
-                if not q:
-                    return '<td class="na">—</td>'
-                return (f'<td class="ow"><a href="{E(google_flights_url(s, cfg))}" target="_blank" rel="noopener" '
-                        f'title="{E(q[1])} · {q[2]} stop(s)">{q[0]:,}</a></td>')
-            out_rows = "".join(f"<tr><th>{fmt_day(d)}</th>{ow_cell(o, dest, d)}</tr>" for d in deps)
-            home_head = "".join(f"<th>from {h}</th>" for h in homes)
-            home_rows = "".join(f"<tr><th>{fmt_day(r)}</th>{''.join(ow_cell(h, o, r) for h in homes)}</tr>" for r in rets)
+            head = "".join(f"<th>⇄ {x}</th>" for x in dests)
+            rows = "".join(
+                f"<tr><th>{dt.date.fromisoformat(d):%a %b %d} → {dt.date.fromisoformat(r):%a %b %d}</th>"
+                + "".join(price_cell(("rt", ((o, x, d), (x, o, r)))) for x in dests) + "</tr>"
+                for d, r in combos)
+            cards.append(f'<div class="card"><h2>{o} round trips</h2><div class="scroll"><table class="grid">'
+                         f'<tr><th>Leave → return</th>{head}</tr>{rows}</table></div></div>')
+        roundtrips = (f'<section><h2 class="sec">Round-trip tickets</h2><p class="muted small">Same airport out and back. '
+                      f'Click a price to open that search in Google Flights.</p><div class="grids">{"".join(cards)}</div></section>')
+
+    # one-way tickets
+    oneways = ""
+    if "one_ways" in tickets:
+        homes_from = homes or dests
+        cards = []
+        for o in origins:
+            if len(dests) == 1:
+                out_head = f"<tr><th>To {dests[0]}</th><th></th></tr>"
+            else:
+                out_head = f"<tr><th>To {E(dest_name)}</th>" + "".join(f"<th>{x}</th>" for x in dests) + "</tr>"
+            out_rows = "".join(f"<tr><th>{fmt_day(d)}</th>" + "".join(price_cell(("ow", ((o, x, d),))) for x in dests)
+                               + "</tr>" for d in deps)
+            home_head = "".join(f"<th>from {h}</th>" for h in homes_from)
+            home_rows = "".join(f"<tr><th>{fmt_day(r)}</th>{''.join(price_cell(('ow', ((h, o, r),))) for h in homes_from)}</tr>"
+                                for r in rets)
             cards.append(f"""<div class="card"><h2>{o} one-way tickets</h2><div class="owgrid">
-              <table class="grid"><tr><th>To {dest}</th><th></th></tr>{out_rows}</table>
+              <table class="grid">{out_head}{out_rows}</table>
               <table class="grid"><tr><th>Home to {o}</th>{home_head}</tr>{home_rows}</table></div></div>""")
         oneways = (f'<section><h2 class="sec">One-way tickets</h2><p class="muted small">Used for the "2×" prices above. '
                    f'Click a price to open that flight in Google Flights.</p><div class="grids">{"".join(cards)}</div></section>')
@@ -486,7 +526,12 @@ def build_report(cfg):
                 trend[o].append((run_at, min(ps)))
     chart = trend_svg(trend, origins, cur)
 
-    if homes:
+    if not simple:
+        sub = cfg.get("subtitle") or f"{'/'.join(origins)} ⇄ {dest_name}"
+        key_extra = (" · <b>RT</b> = one round-trip ticket · <b>2×</b> = two one-way tickets"
+                     " · <b>HND/NRT</b> = landing at HND, flying home from NRT"
+                     " · <b>→YVR</b> = flies home to the other city")
+    elif homes:
         sub = f"Into {dest}, home from {' or '.join(homes)}"
         key_extra = (f" · <b>{'/'.join(homes)}</b> = one multi-city ticket flying home from that airport"
                      f" · <b>2×</b> = two one-way tickets (cheaper that day)")
@@ -495,11 +540,21 @@ def build_report(cfg):
     REPORT_PATH.write_text(PAGE.format(
         title=cfg.get("title", "Sapporo Fare Watch"), sub=sub, cur=cur,
         updated=dt.datetime.fromisoformat(latest_run).astimezone(TZ).strftime("%a %b %d, %I:%M %p"),
-        nruns=len(order), tiles="".join(tiles), grids="".join(grids), chart=chart, oneways=oneways,
+        nruns=len(order), tiles="".join(tiles), grids="".join(grids), chart=chart,
+        oneways=roundtrips + oneways, nav=nav_html(cfg),
         key_extra=key_extra,
         stops=("any" if cfg.get("max_stops") is None else f"≤{cfg['max_stops']} per flight"),
         adults=cfg.get("adults", 1)))
     print(f"Report written: {REPORT_PATH}")
+
+
+def nav_html(cfg):
+    links = cfg.get("links") or []
+    if not links:
+        return ""
+    return '<nav class="nav">' + "".join(
+        f'<a href="{E(l["href"])}"{" aria-current=page" if l.get("current") else ""}>{E(l["label"])}</a>'
+        for l in links) + "</nav>"
 
 
 def trend_svg(trend, origins, cur):
@@ -561,18 +616,20 @@ main{{max-width:960px;margin:0 auto;padding:24px 16px 48px}}h1{{font-size:24px;m
 .grid td a.cell{{display:block;padding:6px 8px;border-radius:4px;text-decoration:none;font-weight:600;outline-offset:-2px}}
 .grid td a.cell:hover,.grid td a.cell:focus-visible{{outline:2px solid var(--ink)}}
 .grid td.na{{padding:6px 8px;color:var(--ink2);background:transparent}}
-.meta{{display:flex;justify-content:flex-end;align-items:center;gap:4px;margin-top:1px;min-height:15px}}.tag{{font-size:10px;font-weight:500;opacity:.9;letter-spacing:.02em}}.meta .d{{margin-left:0}}
+.meta{{display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:center;gap:2px 4px;margin-top:1px;min-height:15px;white-space:normal}}.tag{{font-size:10px;font-weight:500;opacity:.9;letter-spacing:.02em}}.meta .d{{margin-left:0}}
 .grid td.ow{{background:transparent;border:1px solid var(--line)}}.grid td.ow a{{display:block;padding:5px 8px;color:var(--ink);text-decoration:none;font-weight:600}}.grid td.ow a:hover{{color:var(--s1)}}
-.owgrid{{display:grid;grid-template-columns:1fr 1.6fr;gap:12px;align-items:start}}
+.owgrid{{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-start}}.owgrid .grid{{width:auto;flex:1 1 auto}}
 .scroll{{overflow-x:auto}}.grid th.corner{{font-size:11px;line-height:1.3}}
 .d{{font-size:10px;margin-left:6px;padding:0 3px;border-radius:3px;background:var(--card)}}.d.dn{{color:var(--dn)}}.d.up{{color:var(--up)}}
 .trend{{width:100%;height:auto}}.gridl{{stroke:var(--line);stroke-width:1}}.ax{{fill:var(--ink2);font-size:11px}}.lbl{{fill:var(--ink);font-size:12px;font-weight:600}}
 .legend{{display:flex;gap:16px;font-size:13px;color:var(--ink2);margin-bottom:6px}}
 .key{{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:12px;color:var(--ink2);margin:10px 0 0}}.key i{{width:22px;height:10px;border-radius:2px;display:inline-block}}
 section{{margin-top:24px}}
+.nav{{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px}}.nav a{{font-size:13px;padding:4px 10px;border:1px solid var(--line);border-radius:999px;color:var(--ink2);text-decoration:none}}
+.nav a:hover{{border-color:var(--ink2);color:var(--ink)}}.nav a[aria-current]{{background:var(--ink);border-color:var(--ink);color:var(--bg)}}
 @media (max-width:520px){{.owgrid{{grid-template-columns:1fr}}.card{{padding:12px}}.grid td a.cell{{padding:5px 6px}}.grid th{{padding:4px 3px}}}}
 </style></head><body><main>
-<h1>{title}</h1>
+{nav}<h1>{title}</h1>
 <div class="muted">{sub} · {adults} adult · stops {stops} · prices in {cur} · updated {updated} · {nruns} check(s) so far</div>
 <div class="tiles">{tiles}</div>
 <section><div class="grids">{grids}</div>

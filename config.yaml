@@ -26,6 +26,10 @@ currency: USD                # one currency for both airports so prices compare 
 provider: google
 pause_seconds: 4             # politeness delay between searches (random jitter added)
 
+links:
+  - { label: "Sapporo trip", href: "./", current: true }
+  - { label: "Tokyo", href: "tokyo/" }
+
 alerts:
   target_price: 900          # alert whenever any itinerary is at or below this
   drop_percent: 8            # alert when a date combo drops at least this % since the last check
