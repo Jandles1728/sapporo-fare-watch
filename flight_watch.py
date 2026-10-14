@@ -313,14 +313,19 @@ def run(cfg, demo=False):
     for i, s in enumerate(searches, 1):
         kind, legs = s
         label = f"{TRIP[kind]:>10}  " + "  +  ".join(f"{a}→{b} {dt.date.fromisoformat(d):%b %d}" for a, b, d in legs)
-        try:
-            offer = search_fn(cfg, s)
-        except ImportError as e:
-            sys.exit(f"Setup problem, stopping: {e}. Run: pip install -r requirements.txt")
-        except Exception as e:
-            failed += 1
-            print(f"  [{i}/{len(searches)}] {label}: ERROR {type(e).__name__}: {str(e)[:120]}")
-            offer = None
+        offer = None
+        for attempt in (1, 2):  # Google sometimes sends a garbled reply; one retry usually fixes it
+            try:
+                offer = search_fn(cfg, s)
+                break
+            except ImportError as e:
+                sys.exit(f"Setup problem, stopping: {e}. Run: pip install -r requirements.txt")
+            except Exception as e:
+                if attempt == 1 and not demo:
+                    time.sleep(cfg.get("pause_seconds", 4) * 2 + random.uniform(0, 3))
+                    continue
+                failed += 1
+                print(f"  [{i}/{len(searches)}] {label}: ERROR {type(e).__name__}: {str(e)[:120]}")
         if offer:
             con.execute("INSERT INTO quotes VALUES (?,?,?,?,?,?)",
                         (run_at, key_str(s), offer["price"], cur, offer["airlines"], offer["stops"]))
