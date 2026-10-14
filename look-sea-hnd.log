@@ -1,0 +1,15 @@
+Running 12 searches (2026-10-14T21:24:03+00:00)
+  [1/12] round-trip  SEA→HND Feb 12  +  HND→SEA Feb 20: USD 1,116  EVA Air
+  [2/12] round-trip  SEA→HND Feb 12  +  HND→SEA Feb 21: USD 1,116  EVA Air
+  [3/12] round-trip  SEA→HND Feb 12  +  HND→SEA Feb 22: USD 1,159  EVA Air
+  [4/12] round-trip  SEA→HND Feb 13  +  HND→SEA Feb 20: USD 1,077  American
+  [5/12] round-trip  SEA→HND Feb 13  +  HND→SEA Feb 21: USD 1,097  Cathay Pacific
+  [6/12] round-trip  SEA→HND Feb 13  +  HND→SEA Feb 22: USD 1,073  United
+  [7/12] round-trip  SEA→HND Feb 14  +  HND→SEA Feb 20: USD 1,070  American
+  [8/12] round-trip  SEA→HND Feb 14  +  HND→SEA Feb 21: ERROR JSONDecodeError: Extra data: line 1 column 235 (char 234)
+  [9/12] round-trip  SEA→HND Feb 14  +  HND→SEA Feb 22: USD 1,063  Korean Air
+  [10/12] round-trip  SEA→HND Feb 15  +  HND→SEA Feb 20: USD 1,070  American
+  [11/12] round-trip  SEA→HND Feb 15  +  HND→SEA Feb 21: USD 883  Cathay Pacific
+  [12/12] round-trip  SEA→HND Feb 15  +  HND→SEA Feb 22: USD 883  Cathay Pacific
+Done: 11 prices saved, 1 errors.
+Report written: /home/runner/work/sapporo-fare-watch/sapporo-fare-watch/report-sea-hnd.html
