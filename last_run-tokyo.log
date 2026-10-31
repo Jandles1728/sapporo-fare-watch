@@ -1,90 +1,90 @@
-Running 76 searches (2026-10-30T19:26:23+00:00)
+Running 76 searches (2026-10-31T08:28:39+00:00)
   [1/76]    one-way  HND→SEA Feb 20: USD 783  EVA Air
-  [2/76]    one-way  HND→SEA Feb 21: USD 800  China Airlines
-  [3/76]    one-way  HND→SEA Feb 22: USD 678  Philippine Airlines
-  [4/76]    one-way  HND→YVR Feb 20: USD 757  ANA, Air Canada
-  [5/76]    one-way  HND→YVR Feb 21: USD 765  China Airlines
-  [6/76]    one-way  HND→YVR Feb 22: USD 757  ANA, Air Canada
-  [7/76]    one-way  NRT→SEA Feb 20: USD 769  EVA Air
+  [2/76]    one-way  HND→SEA Feb 21: USD 799  China Airlines
+  [3/76]    one-way  HND→SEA Feb 22: USD 764  China Airlines
+  [4/76]    one-way  HND→YVR Feb 20: USD 756  ANA, Air Canada
+  [5/76]    one-way  HND→YVR Feb 21: USD 764  China Airlines
+  [6/76]    one-way  HND→YVR Feb 22: USD 756  ANA, Air Canada
+  [7/76]    one-way  NRT→SEA Feb 20: USD 768  EVA Air
   [8/76]    one-way  NRT→SEA Feb 21: USD 780  Korean Air
-  [9/76]    one-way  NRT→SEA Feb 22: USD 772  STARLUX Airlines
-  [10/76]    one-way  NRT→YVR Feb 20: USD 770  Trinity Airways
+  [9/76]    one-way  NRT→SEA Feb 22: USD 771  STARLUX Airlines
+  [10/76]    one-way  NRT→YVR Feb 20: USD 769  Trinity Airways
   [11/76]    one-way  NRT→YVR Feb 21: USD 690  China Airlines
   [12/76]    one-way  NRT→YVR Feb 22: USD 733  Trinity Airways
   [13/76]    one-way  SEA→HND Feb 12: USD 694  Alaska, JAL
   [14/76]    one-way  SEA→HND Feb 13: USD 498  United
   [15/76]    one-way  SEA→HND Feb 14: USD 488  Alaska, JAL
-  [16/76]    one-way  SEA→HND Feb 15: USD 498  United
+  [16/76]    one-way  SEA→HND Feb 15: USD 454  Philippine Airlines
   [17/76]    one-way  SEA→NRT Feb 12: USD 696  Korean Air
-  [18/76]    one-way  SEA→NRT Feb 13: USD 488  Alaska, JAL
+  [18/76]    one-way  SEA→NRT Feb 13: USD 498  United
   [19/76]    one-way  SEA→NRT Feb 14: USD 478  Alaska, JAL
   [20/76]    one-way  SEA→NRT Feb 15: USD 434  WestJet
   [21/76]    one-way  YVR→HND Feb 12: USD 567  Korean Air
-  [22/76]    one-way  YVR→HND Feb 13: USD 875  United
-  [23/76]    one-way  YVR→HND Feb 14: USD 578  Korean Air
-  [24/76]    one-way  YVR→HND Feb 15: USD 650  Korean Air
+  [22/76]    one-way  YVR→HND Feb 13: USD 874  United
+  [23/76]    one-way  YVR→HND Feb 14: USD 577  Korean Air
+  [24/76]    one-way  YVR→HND Feb 15: USD 649  Korean Air
   [25/76]    one-way  YVR→NRT Feb 12: USD 567  Korean Air
-  [26/76]    one-way  YVR→NRT Feb 13: USD 543  WestJet
-  [27/76]    one-way  YVR→NRT Feb 14: USD 471  WestJet
-  [28/76]    one-way  YVR→NRT Feb 15: USD 386  WestJet
-  [29/76] round-trip  SEA→HND Feb 12  +  HND→SEA Feb 20: USD 1,479  Air Canada, ANA
-  [30/76] round-trip  SEA→HND Feb 12  +  HND→SEA Feb 21: USD 1,487  Delta, Korean Air
-  [31/76] round-trip  SEA→HND Feb 12  +  HND→SEA Feb 22: USD 1,250  Delta, Korean Air
-  [32/76] round-trip  SEA→HND Feb 13  +  HND→SEA Feb 20: USD 1,206  American
-  [33/76] round-trip  SEA→HND Feb 13  +  HND→SEA Feb 21: USD 1,347  American
+  [26/76]    one-way  YVR→NRT Feb 13: USD 542  WestJet
+  [27/76]    one-way  YVR→NRT Feb 14: USD 470  WestJet
+  [28/76]    one-way  YVR→NRT Feb 15: USD 385  WestJet
+  [29/76] round-trip  SEA→HND Feb 12  +  HND→SEA Feb 20: USD 1,250  Delta, Korean Air
+  [30/76] round-trip  SEA→HND Feb 12  +  HND→SEA Feb 21: USD 1,485  Alaska, JAL
+  [31/76] round-trip  SEA→HND Feb 12  +  HND→SEA Feb 22: USD 1,178  Alaska, JAL
+  [32/76] round-trip  SEA→HND Feb 13  +  HND→SEA Feb 20: USD 1,185  Korean Air
+  [33/76] round-trip  SEA→HND Feb 13  +  HND→SEA Feb 21: USD 1,187  Cathay Pacific
   [34/76] round-trip  SEA→HND Feb 13  +  HND→SEA Feb 22: USD 1,003  American
-  [35/76] round-trip  SEA→HND Feb 14  +  HND→SEA Feb 20: USD 1,212  American
-  [36/76] round-trip  SEA→HND Feb 14  +  HND→SEA Feb 21: USD 1,109  American
-  [37/76] round-trip  SEA→HND Feb 14  +  HND→SEA Feb 22: USD 876  Korean Air
-  [38/76] round-trip  SEA→HND Feb 15  +  HND→SEA Feb 20: USD 1,333  United
-  [39/76] round-trip  SEA→HND Feb 15  +  HND→SEA Feb 21: USD 1,393  United
-  [40/76] round-trip  SEA→HND Feb 15  +  HND→SEA Feb 22: USD 887  American
-  [41/76] round-trip  SEA→NRT Feb 12  +  NRT→SEA Feb 20: USD 1,255  Korean Air
+  [35/76] round-trip  SEA→HND Feb 14  +  HND→SEA Feb 20: USD 1,135  Korean Air
+  [36/76] round-trip  SEA→HND Feb 14  +  HND→SEA Feb 21: USD 1,122  Korean Air
+  [37/76] round-trip  SEA→HND Feb 14  +  HND→SEA Feb 22: USD 896  Korean Air
+  [38/76] round-trip  SEA→HND Feb 15  +  HND→SEA Feb 20: USD 885  Korean Air
+  [39/76] round-trip  SEA→HND Feb 15  +  HND→SEA Feb 21: USD 1,063  Cathay Pacific
+  [40/76] round-trip  SEA→HND Feb 15  +  HND→SEA Feb 22: USD 896  Korean Air
+  [41/76] round-trip  SEA→NRT Feb 12  +  NRT→SEA Feb 20: USD 1,147  Korean Air
   [42/76] round-trip  SEA→NRT Feb 12  +  NRT→SEA Feb 21: USD 1,384  Korean Air
   [43/76] round-trip  SEA→NRT Feb 12  +  NRT→SEA Feb 22: USD 1,146  United, ANA
-  [44/76] round-trip  SEA→NRT Feb 13  +  NRT→SEA Feb 20: USD 1,053  Alaska, JAL
-  [45/76] round-trip  SEA→NRT Feb 13  +  NRT→SEA Feb 21: USD 1,252  Alaska, JAL
+  [44/76] round-trip  SEA→NRT Feb 13  +  NRT→SEA Feb 20: USD 1,114  Alaska, JAL
+  [45/76] round-trip  SEA→NRT Feb 13  +  NRT→SEA Feb 21: USD 1,367  United
   [46/76] round-trip  SEA→NRT Feb 13  +  NRT→SEA Feb 22: USD 888  United
-  [47/76] round-trip  SEA→NRT Feb 14  +  NRT→SEA Feb 20: USD 1,053  Alaska, JAL
+  [47/76] round-trip  SEA→NRT Feb 14  +  NRT→SEA Feb 20: USD 1,125  Korean Air
   [48/76] round-trip  SEA→NRT Feb 14  +  NRT→SEA Feb 21: USD 1,108  Delta, Korean Air
   [49/76] round-trip  SEA→NRT Feb 14  +  NRT→SEA Feb 22: USD 871  Delta, Korean Air
   [50/76] round-trip  SEA→NRT Feb 15  +  NRT→SEA Feb 20: USD 871  Delta, Korean Air
   [51/76] round-trip  SEA→NRT Feb 15  +  NRT→SEA Feb 21: USD 1,136  Delta, Korean Air
   [52/76] round-trip  SEA→NRT Feb 15  +  NRT→SEA Feb 22: USD 871  Delta, Korean Air
-  [53/76] round-trip  YVR→HND Feb 12  +  HND→YVR Feb 20: USD 1,023  Air Canada, ANA
-  [54/76] round-trip  YVR→HND Feb 12  +  HND→YVR Feb 21: USD 989  Air Canada, ANA
-  [55/76] round-trip  YVR→HND Feb 12  +  HND→YVR Feb 22: USD 987  Air Canada, ANA
-  [56/76] round-trip  YVR→HND Feb 13  +  HND→YVR Feb 20: USD 1,235  United
-  [57/76] round-trip  YVR→HND Feb 13  +  HND→YVR Feb 21: USD 1,322  United
-  [58/76] round-trip  YVR→HND Feb 13  +  HND→YVR Feb 22: USD 1,056  American
-  [59/76] round-trip  YVR→HND Feb 14  +  HND→YVR Feb 20: USD 847  Korean Air
-  [60/76] round-trip  YVR→HND Feb 14  +  HND→YVR Feb 21: USD 847  Korean Air
-  [61/76] round-trip  YVR→HND Feb 14  +  HND→YVR Feb 22: USD 847  Korean Air
-  [62/76] round-trip  YVR→HND Feb 15  +  HND→YVR Feb 20: USD 1,064  Air Canada, JAL
-  [63/76] round-trip  YVR→HND Feb 15  +  HND→YVR Feb 21: USD 1,127  Korean Air
-  [64/76] round-trip  YVR→HND Feb 15  +  HND→YVR Feb 22: ERROR JSONDecodeError: Extra data: line 1 column 236 (char 235)
-  [65/76] round-trip  YVR→NRT Feb 12  +  NRT→YVR Feb 20: USD 1,168  Air Canada, Jetstar
-  [66/76] round-trip  YVR→NRT Feb 12  +  NRT→YVR Feb 21: USD 1,116  Korean Air
-  [67/76] round-trip  YVR→NRT Feb 12  +  NRT→YVR Feb 22: USD 1,116  Korean Air
-  [68/76] round-trip  YVR→NRT Feb 13  +  NRT→YVR Feb 20: USD 1,188  WestJet
-  [69/76] round-trip  YVR→NRT Feb 13  +  NRT→YVR Feb 21: USD 1,331  WestJet
-  [70/76] round-trip  YVR→NRT Feb 13  +  NRT→YVR Feb 22: USD 1,045  WestJet
-  [71/76] round-trip  YVR→NRT Feb 14  +  NRT→YVR Feb 20: USD 1,096  Air Canada, Jetstar
-  [72/76] round-trip  YVR→NRT Feb 14  +  NRT→YVR Feb 21: USD 1,116  Korean Air
-  [73/76] round-trip  YVR→NRT Feb 14  +  NRT→YVR Feb 22: USD 973  WestJet
-  [74/76] round-trip  YVR→NRT Feb 15  +  NRT→YVR Feb 20: USD 1,031  WestJet
-  [75/76] round-trip  YVR→NRT Feb 15  +  NRT→YVR Feb 21: USD 1,116  Korean Air
-  [76/76] round-trip  YVR→NRT Feb 15  +  NRT→YVR Feb 22: USD 888  WestJet
-Done: 75 prices saved, 1 errors.
+  [53/76] round-trip  YVR→HND Feb 12  +  HND→YVR Feb 20: USD 1,241  Cathay Pacific
+  [54/76] round-trip  YVR→HND Feb 12  +  HND→YVR Feb 21: USD 987  Air Canada, ANA
+  [55/76] round-trip  YVR→HND Feb 12  +  HND→YVR Feb 22: USD 986  Air Canada, ANA
+  [56/76] round-trip  YVR→HND Feb 13  +  HND→YVR Feb 20: USD 1,233  United
+  [57/76] round-trip  YVR→HND Feb 13  +  HND→YVR Feb 21: USD 1,320  United
+  [58/76] round-trip  YVR→HND Feb 13  +  HND→YVR Feb 22: USD 1,126  American
+  [59/76] round-trip  YVR→HND Feb 14  +  HND→YVR Feb 20: USD 845  Korean Air
+  [60/76] round-trip  YVR→HND Feb 14  +  HND→YVR Feb 21: USD 845  Korean Air
+  [61/76] round-trip  YVR→HND Feb 14  +  HND→YVR Feb 22: USD 845  Korean Air
+  [62/76] round-trip  YVR→HND Feb 15  +  HND→YVR Feb 20: USD 1,192  United
+  [63/76] round-trip  YVR→HND Feb 15  +  HND→YVR Feb 21: USD 1,115  Korean Air
+  [64/76] round-trip  YVR→HND Feb 15  +  HND→YVR Feb 22: USD 974  United
+  [65/76] round-trip  YVR→NRT Feb 12  +  NRT→YVR Feb 20: USD 1,166  Air Canada, Jetstar
+  [66/76] round-trip  YVR→NRT Feb 12  +  NRT→YVR Feb 21: USD 1,115  Korean Air
+  [67/76] round-trip  YVR→NRT Feb 12  +  NRT→YVR Feb 22: USD 1,115  Korean Air
+  [68/76] round-trip  YVR→NRT Feb 13  +  NRT→YVR Feb 20: USD 1,186  WestJet
+  [69/76] round-trip  YVR→NRT Feb 13  +  NRT→YVR Feb 21: USD 1,329  WestJet
+  [70/76] round-trip  YVR→NRT Feb 13  +  NRT→YVR Feb 22: USD 1,043  WestJet
+  [71/76] round-trip  YVR→NRT Feb 14  +  NRT→YVR Feb 20: USD 1,095  Air Canada, Jetstar
+  [72/76] round-trip  YVR→NRT Feb 14  +  NRT→YVR Feb 21: USD 1,115  Korean Air
+  [73/76] round-trip  YVR→NRT Feb 14  +  NRT→YVR Feb 22: USD 972  WestJet
+  [74/76] round-trip  YVR→NRT Feb 15  +  NRT→YVR Feb 20: USD 1,030  WestJet
+  [75/76] round-trip  YVR→NRT Feb 15  +  NRT→YVR Feb 21: USD 1,115  Korean Air
+  [76/76] round-trip  YVR→NRT Feb 15  +  NRT→YVR Feb 22: USD 886  WestJet
+Done: 76 prices saved, 0 errors.
 
 ALERTS:
-  YVR Feb 14–Feb 20: USD 847 (Round trip YVR⇄HND) — under target 900
-  YVR Feb 14–Feb 21: USD 847 (Round trip YVR⇄HND) — under target 900
-  YVR Feb 14–Feb 22: USD 847 (Round trip YVR⇄HND) — under target 900
+  YVR Feb 14–Feb 20: USD 845 (Round trip YVR⇄HND) — under target 900
+  YVR Feb 14–Feb 21: USD 845 (Round trip YVR⇄HND) — under target 900
+  YVR Feb 14–Feb 22: USD 845 (Round trip YVR⇄HND) — under target 900
   SEA Feb 14–Feb 22: USD 871 (Round trip SEA⇄NRT) — under target 900
-  SEA Feb 15–Feb 20: USD 871 (Round trip SEA⇄NRT) — under target 900, down 205 from 1,076
+  SEA Feb 15–Feb 20: USD 871 (Round trip SEA⇄NRT) — under target 900
   SEA Feb 15–Feb 22: USD 871 (Round trip SEA⇄NRT) — under target 900
+  YVR Feb 15–Feb 22: USD 886 (Round trip YVR⇄NRT) — under target 900
   SEA Feb 13–Feb 22: USD 888 (Round trip SEA⇄NRT) — under target 900
-  YVR Feb 15–Feb 22: USD 888 (Round trip YVR⇄NRT) — under target 900
-  YVR Feb 12–Feb 21: USD 989 (Round trip YVR⇄HND) — down 127 from 1,116
+  SEA Feb 12–Feb 20: USD 1,147 (Round trip SEA⇄NRT) — down 108 from 1,255
 Report written: /home/runner/work/sapporo-fare-watch/sapporo-fare-watch/report-tokyo.html
