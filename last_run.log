@@ -1,71 +1,71 @@
-Running 68 searches (2026-11-02T09:35:07+00:00)
-  [1/68]    one-way  HND→SEA Feb 20: USD 804  EVA Air
-  [2/68]    one-way  HND→SEA Feb 21: USD 833  China Airlines
-  [3/68]    one-way  HND→SEA Feb 22: USD 722  Philippine Airlines
-  [4/68]    one-way  HND→YVR Feb 20: USD 815  EVA Air
-  [5/68]    one-way  HND→YVR Feb 21: USD 762  EVA Air
-  [6/68]    one-way  HND→YVR Feb 22: USD 798  China Airlines
-  [7/68]    one-way  NRT→SEA Feb 20: USD 828  Korean Air, Delta
-  [8/68]    one-way  NRT→SEA Feb 21: USD 824  Korean Air
-  [9/68]    one-way  NRT→SEA Feb 22: USD 778  Korean Air, Delta
-  [10/68]    one-way  NRT→YVR Feb 20: USD 798  EVA Air
-  [11/68]    one-way  NRT→YVR Feb 21: USD 798  EVA Air
-  [12/68]    one-way  NRT→YVR Feb 22: USD 763  Trinity Airways
-  [13/68]    one-way  SEA→CTS Feb 12: USD 539  Delta, Korean Air
-  [14/68]    one-way  SEA→CTS Feb 13: USD 694  Delta, Korean Air
-  [15/68]    one-way  SEA→CTS Feb 14: USD 489  Delta, Korean Air
-  [16/68]    one-way  SEA→CTS Feb 15: USD 489  Delta, Korean Air
-  [17/68]    one-way  YVR→CTS Feb 12: USD 779  Korean Air
-  [18/68]    one-way  YVR→CTS Feb 13: USD 1,007  Cathay Pacific
-  [19/68]    one-way  YVR→CTS Feb 14: USD 743  Trinity Airways
-  [20/68]    one-way  YVR→CTS Feb 15: USD 733  Korean Air
-  [21/68] multi-city  SEA→CTS Feb 12  +  HND→SEA Feb 20: USD 1,707  JAL
-  [22/68] multi-city  SEA→CTS Feb 12  +  HND→SEA Feb 21: USD 1,707  JAL
-  [23/68] multi-city  SEA→CTS Feb 12  +  HND→SEA Feb 22: USD 1,502  Delta, ANA
-  [24/68] multi-city  SEA→CTS Feb 12  +  NRT→SEA Feb 20: USD 1,572  JAL
-  [25/68] multi-city  SEA→CTS Feb 12  +  NRT→SEA Feb 21: USD 1,604  JAL
-  [26/68] multi-city  SEA→CTS Feb 12  +  NRT→SEA Feb 22: USD 1,418  JAL
-  [27/68] multi-city  SEA→CTS Feb 13  +  HND→SEA Feb 20: USD 1,950  JAL
-  [28/68] multi-city  SEA→CTS Feb 13  +  HND→SEA Feb 21: USD 1,848  JAL
-  [29/68] multi-city  SEA→CTS Feb 13  +  HND→SEA Feb 22: USD 1,594  JAL
-  [30/68] multi-city  SEA→CTS Feb 13  +  NRT→SEA Feb 20: USD 1,713  JAL
-  [31/68] multi-city  SEA→CTS Feb 13  +  NRT→SEA Feb 21: USD 1,745  JAL
-  [32/68] multi-city  SEA→CTS Feb 13  +  NRT→SEA Feb 22: USD 1,559  JAL
-  [33/68] multi-city  SEA→CTS Feb 14  +  HND→SEA Feb 20: USD 1,505  JAL
-  [34/68] multi-city  SEA→CTS Feb 14  +  HND→SEA Feb 21: USD 1,502  JAL
-  [35/68] multi-city  SEA→CTS Feb 14  +  HND→SEA Feb 22: USD 1,203  Delta, ANA
-  [36/68] multi-city  SEA→CTS Feb 14  +  NRT→SEA Feb 20: USD 1,370  JAL
-  [37/68] multi-city  SEA→CTS Feb 14  +  NRT→SEA Feb 21: USD 1,399  JAL
-  [38/68] multi-city  SEA→CTS Feb 14  +  NRT→SEA Feb 22: USD 1,213  JAL, Jetstar
-  [39/68] multi-city  SEA→CTS Feb 15  +  HND→SEA Feb 20: USD 1,465  JAL
-  [40/68] multi-city  SEA→CTS Feb 15  +  HND→SEA Feb 21: USD 1,505  JAL
-  [41/68] multi-city  SEA→CTS Feb 15  +  HND→SEA Feb 22: USD 1,203  Delta, ANA
-  [42/68] multi-city  SEA→CTS Feb 15  +  NRT→SEA Feb 20: USD 1,370  JAL
-  [43/68] multi-city  SEA→CTS Feb 15  +  NRT→SEA Feb 21: USD 1,399  JAL
-  [44/68] multi-city  SEA→CTS Feb 15  +  NRT→SEA Feb 22: USD 1,213  JAL, Jetstar
-  [45/68] multi-city  YVR→CTS Feb 12  +  HND→YVR Feb 20: USD 1,133  ANA
-  [46/68] multi-city  YVR→CTS Feb 12  +  HND→YVR Feb 21: USD 1,220  ANA
-  [47/68] multi-city  YVR→CTS Feb 12  +  HND→YVR Feb 22: USD 1,062  ANA
-  [48/68] multi-city  YVR→CTS Feb 12  +  NRT→YVR Feb 20: USD 1,115  Korean Air
-  [49/68] multi-city  YVR→CTS Feb 12  +  NRT→YVR Feb 21: USD 1,115  Korean Air
-  [50/68] multi-city  YVR→CTS Feb 12  +  NRT→YVR Feb 22: USD 1,219  Korean Air
-  [51/68] multi-city  YVR→CTS Feb 13  +  HND→YVR Feb 20: USD 1,205  ANA
-  [52/68] multi-city  YVR→CTS Feb 13  +  HND→YVR Feb 21: USD 1,292  ANA
-  [53/68] multi-city  YVR→CTS Feb 13  +  HND→YVR Feb 22: USD 1,133  ANA
-  [54/68] multi-city  YVR→CTS Feb 13  +  NRT→YVR Feb 20: USD 1,327  JAL
-  [55/68] multi-city  YVR→CTS Feb 13  +  NRT→YVR Feb 21: USD 1,277  JAL
-  [56/68] multi-city  YVR→CTS Feb 13  +  NRT→YVR Feb 22: USD 1,277  JAL
-  [57/68] multi-city  YVR→CTS Feb 14  +  HND→YVR Feb 20: USD 1,342  ANA, Air Do
-  [58/68] multi-city  YVR→CTS Feb 14  +  HND→YVR Feb 21: USD 1,429  ANA, Air Do
-  [59/68] multi-city  YVR→CTS Feb 14  +  HND→YVR Feb 22: USD 1,270  JAL
-  [60/68] multi-city  YVR→CTS Feb 14  +  NRT→YVR Feb 20: USD 1,115  Korean Air
-  [61/68] multi-city  YVR→CTS Feb 14  +  NRT→YVR Feb 21: USD 1,115  Korean Air
-  [62/68] multi-city  YVR→CTS Feb 14  +  NRT→YVR Feb 22: USD 1,219  JAL
-  [63/68] multi-city  YVR→CTS Feb 15  +  HND→YVR Feb 20: USD 1,305  ANA, Air Do
-  [64/68] multi-city  YVR→CTS Feb 15  +  HND→YVR Feb 21: USD 1,392  ANA, Air Do
-  [65/68] multi-city  YVR→CTS Feb 15  +  HND→YVR Feb 22: USD 1,197  JAL
-  [66/68] multi-city  YVR→CTS Feb 15  +  NRT→YVR Feb 20: USD 1,290  JAL, Jetstar
-  [67/68] multi-city  YVR→CTS Feb 15  +  NRT→YVR Feb 21: USD 1,240  JAL, Jetstar
-  [68/68] multi-city  YVR→CTS Feb 15  +  NRT→YVR Feb 22: USD 1,240  JAL
+Running 68 searches (2026-11-02T22:47:39+00:00)
+  [1/68]    one-way  HND→SEA Feb 20: USD 802  EVA Air
+  [2/68]    one-way  HND→SEA Feb 21: USD 831  China Airlines
+  [3/68]    one-way  HND→SEA Feb 22: USD 721  Philippine Airlines
+  [4/68]    one-way  HND→YVR Feb 20: USD 814  EVA Air
+  [5/68]    one-way  HND→YVR Feb 21: USD 760  EVA Air
+  [6/68]    one-way  HND→YVR Feb 22: USD 796  China Airlines
+  [7/68]    one-way  NRT→SEA Feb 20: USD 871  Korean Air, Delta
+  [8/68]    one-way  NRT→SEA Feb 21: USD 822  Korean Air
+  [9/68]    one-way  NRT→SEA Feb 22: USD 818  STARLUX Airlines
+  [10/68]    one-way  NRT→YVR Feb 20: USD 797  EVA Air
+  [11/68]    one-way  NRT→YVR Feb 21: USD 797  EVA Air
+  [12/68]    one-way  NRT→YVR Feb 22: USD 762  Trinity Airways
+  [13/68]    one-way  SEA→CTS Feb 12: USD 600  Delta, Korean Air
+  [14/68]    one-way  SEA→CTS Feb 13: USD 696  Korean Air
+  [15/68]    one-way  SEA→CTS Feb 14: USD 491  Korean Air
+  [16/68]    one-way  SEA→CTS Feb 15: USD 491  Korean Air
+  [17/68]    one-way  YVR→CTS Feb 12: USD 778  Korean Air
+  [18/68]    one-way  YVR→CTS Feb 13: USD 1,004  Cathay Pacific
+  [19/68]    one-way  YVR→CTS Feb 14: USD 741  Trinity Airways
+  [20/68]    one-way  YVR→CTS Feb 15: USD 731  Korean Air
+  [21/68] multi-city  SEA→CTS Feb 12  +  HND→SEA Feb 20: USD 1,981  JAL
+  [22/68] multi-city  SEA→CTS Feb 12  +  HND→SEA Feb 21: USD 1,723  JAL
+  [23/68] multi-city  SEA→CTS Feb 12  +  HND→SEA Feb 22: USD 1,523  JAL
+  [24/68] multi-city  SEA→CTS Feb 12  +  NRT→SEA Feb 20: USD 1,588  JAL
+  [25/68] multi-city  SEA→CTS Feb 12  +  NRT→SEA Feb 21: USD 1,724  JAL
+  [26/68] multi-city  SEA→CTS Feb 12  +  NRT→SEA Feb 22: USD 1,434  JAL
+  [27/68] multi-city  SEA→CTS Feb 13  +  HND→SEA Feb 20: USD 1,981  JAL
+  [28/68] multi-city  SEA→CTS Feb 13  +  HND→SEA Feb 21: USD 1,864  JAL
+  [29/68] multi-city  SEA→CTS Feb 13  +  HND→SEA Feb 22: USD 1,625  JAL
+  [30/68] multi-city  SEA→CTS Feb 13  +  NRT→SEA Feb 20: USD 1,729  JAL
+  [31/68] multi-city  SEA→CTS Feb 13  +  NRT→SEA Feb 21: USD 1,865  JAL
+  [32/68] multi-city  SEA→CTS Feb 13  +  NRT→SEA Feb 22: USD 1,575  JAL
+  [33/68] multi-city  SEA→CTS Feb 14  +  HND→SEA Feb 20: USD 1,662  ANA, Air Do
+  [34/68] multi-city  SEA→CTS Feb 14  +  HND→SEA Feb 21: USD 1,518  JAL
+  [35/68] multi-city  SEA→CTS Feb 14  +  HND→SEA Feb 22: USD 1,318  JAL
+  [36/68] multi-city  SEA→CTS Feb 14  +  NRT→SEA Feb 20: USD 1,386  JAL
+  [37/68] multi-city  SEA→CTS Feb 14  +  NRT→SEA Feb 21: USD 1,519  JAL
+  [38/68] multi-city  SEA→CTS Feb 14  +  NRT→SEA Feb 22: USD 1,229  JAL, Jetstar
+  [39/68] multi-city  SEA→CTS Feb 15  +  HND→SEA Feb 20: USD 1,465  ANA, Air Do
+  [40/68] multi-city  SEA→CTS Feb 15  +  HND→SEA Feb 21: USD 1,521  JAL
+  [41/68] multi-city  SEA→CTS Feb 15  +  HND→SEA Feb 22: USD 1,276  JAL
+  [42/68] multi-city  SEA→CTS Feb 15  +  NRT→SEA Feb 20: USD 1,386  JAL
+  [43/68] multi-city  SEA→CTS Feb 15  +  NRT→SEA Feb 21: USD 1,522  JAL
+  [44/68] multi-city  SEA→CTS Feb 15  +  NRT→SEA Feb 22: USD 1,229  JAL, Jetstar
+  [45/68] multi-city  YVR→CTS Feb 12  +  HND→YVR Feb 20: USD 1,131  ANA
+  [46/68] multi-city  YVR→CTS Feb 12  +  HND→YVR Feb 21: USD 1,218  ANA
+  [47/68] multi-city  YVR→CTS Feb 12  +  HND→YVR Feb 22: USD 1,059  ANA
+  [48/68] multi-city  YVR→CTS Feb 12  +  NRT→YVR Feb 20: USD 1,112  Korean Air
+  [49/68] multi-city  YVR→CTS Feb 12  +  NRT→YVR Feb 21: USD 1,112  Korean Air
+  [50/68] multi-city  YVR→CTS Feb 12  +  NRT→YVR Feb 22: USD 1,217  Korean Air
+  [51/68] multi-city  YVR→CTS Feb 13  +  HND→YVR Feb 20: USD 1,202  ANA
+  [52/68] multi-city  YVR→CTS Feb 13  +  HND→YVR Feb 21: USD 1,289  ANA
+  [53/68] multi-city  YVR→CTS Feb 13  +  HND→YVR Feb 22: USD 1,131  ANA
+  [54/68] multi-city  YVR→CTS Feb 13  +  NRT→YVR Feb 20: USD 1,335  JAL
+  [55/68] multi-city  YVR→CTS Feb 13  +  NRT→YVR Feb 21: USD 1,286  JAL
+  [56/68] multi-city  YVR→CTS Feb 13  +  NRT→YVR Feb 22: USD 1,286  JAL
+  [57/68] multi-city  YVR→CTS Feb 14  +  HND→YVR Feb 20: USD 1,339  ANA, Air Do
+  [58/68] multi-city  YVR→CTS Feb 14  +  HND→YVR Feb 21: USD 1,426  ANA, Air Do
+  [59/68] multi-city  YVR→CTS Feb 14  +  HND→YVR Feb 22: USD 1,268  JAL
+  [60/68] multi-city  YVR→CTS Feb 14  +  NRT→YVR Feb 20: USD 1,112  Korean Air
+  [61/68] multi-city  YVR→CTS Feb 14  +  NRT→YVR Feb 21: USD 1,112  Korean Air
+  [62/68] multi-city  YVR→CTS Feb 14  +  NRT→YVR Feb 22: USD 1,217  Korean Air
+  [63/68] multi-city  YVR→CTS Feb 15  +  HND→YVR Feb 20: USD 1,303  ANA, Air Do
+  [64/68] multi-city  YVR→CTS Feb 15  +  HND→YVR Feb 21: USD 1,389  ANA, Air Do
+  [65/68] multi-city  YVR→CTS Feb 15  +  HND→YVR Feb 22: USD 1,231  JAL
+  [66/68] multi-city  YVR→CTS Feb 15  +  NRT→YVR Feb 20: USD 1,299  JAL, Jetstar
+  [67/68] multi-city  YVR→CTS Feb 15  +  NRT→YVR Feb 21: USD 1,249  JAL, Jetstar
+  [68/68] multi-city  YVR→CTS Feb 15  +  NRT→YVR Feb 22: USD 1,230  JAL
 Done: 68 prices saved, 0 errors.
 Report written: /home/runner/work/sapporo-fare-watch/sapporo-fare-watch/report.html
