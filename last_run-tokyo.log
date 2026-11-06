@@ -1,32 +1,32 @@
-Running 76 searches (2026-11-06T09:27:55+00:00)
-  [1/76]    one-way  HND→SEA Feb 20: USD 801  EVA Air
-  [2/76]    one-way  HND→SEA Feb 21: USD 830  China Airlines
-  [3/76]    one-way  HND→SEA Feb 22: USD 795  China Airlines
-  [4/76]    one-way  HND→YVR Feb 20: USD 850  China Airlines
-  [5/76]    one-way  HND→YVR Feb 21: USD 795  China Airlines
-  [6/76]    one-way  HND→YVR Feb 22: USD 795  China Airlines
-  [7/76]    one-way  NRT→SEA Feb 20: USD 787  EVA Air
-  [8/76]    one-way  NRT→SEA Feb 21: USD 821  Korean Air
-  [9/76]    one-way  NRT→SEA Feb 22: USD 817  STARLUX Airlines
-  [10/76]    one-way  NRT→YVR Feb 20: USD 795  EVA Air
-  [11/76]    one-way  NRT→YVR Feb 21: USD 795  EVA Air
-  [12/76]    one-way  NRT→YVR Feb 22: ERROR JSONDecodeError: Extra data: line 1 column 235 (char 234)
+Running 76 searches (2026-11-06T20:28:21+00:00)
+  [1/76]    one-way  HND→SEA Feb 20: USD 799  EVA Air
+  [2/76]    one-way  HND→SEA Feb 21: USD 828  China Airlines
+  [3/76]    one-way  HND→SEA Feb 22: USD 793  China Airlines
+  [4/76]    one-way  HND→YVR Feb 20: USD 848  China Airlines
+  [5/76]    one-way  HND→YVR Feb 21: USD 793  China Airlines
+  [6/76]    one-way  HND→YVR Feb 22: USD 793  China Airlines
+  [7/76]    one-way  NRT→SEA Feb 20: USD 785  EVA Air
+  [8/76]    one-way  NRT→SEA Feb 21: USD 819  Korean Air
+  [9/76]    one-way  NRT→SEA Feb 22: USD 814  STARLUX Airlines
+  [10/76]    one-way  NRT→YVR Feb 20: USD 793  EVA Air
+  [11/76]    one-way  NRT→YVR Feb 21: USD 793  EVA Air
+  [12/76]    one-way  NRT→YVR Feb 22: USD 757  Trinity Airways
   [13/76]    one-way  SEA→HND Feb 12: USD 610  American
   [14/76]    one-way  SEA→HND Feb 13: USD 560  American
   [15/76]    one-way  SEA→HND Feb 14: USD 547  American
   [16/76]    one-way  SEA→HND Feb 15: USD 560  American
   [17/76]    one-way  SEA→NRT Feb 12: USD 625  Delta, Korean Air
-  [18/76]    one-way  SEA→NRT Feb 13: USD 560  American
+  [18/76]    one-way  SEA→NRT Feb 13: USD 536  Alaska, JAL
   [19/76]    one-way  SEA→NRT Feb 14: USD 536  Alaska, JAL
   [20/76]    one-way  SEA→NRT Feb 15: USD 560  American
-  [21/76]    one-way  YVR→HND Feb 12: USD 696  Korean Air, Asiana Airlines
-  [22/76]    one-way  YVR→HND Feb 13: USD 907  China Southern
-  [23/76]    one-way  YVR→HND Feb 14: USD 573  Korean Air
-  [24/76]    one-way  YVR→HND Feb 15: USD 838  China Airlines
-  [25/76]    one-way  YVR→NRT Feb 12: USD 634  Korean Air
-  [26/76]    one-way  YVR→NRT Feb 13: USD 599  WestJet
-  [27/76]    one-way  YVR→NRT Feb 14: USD 634  Korean Air
-  [28/76]    one-way  YVR→NRT Feb 15: USD 528  WestJet
+  [21/76]    one-way  YVR→HND Feb 12: USD 693  Korean Air, Asiana Airlines
+  [22/76]    one-way  YVR→HND Feb 13: USD 904  China Southern
+  [23/76]    one-way  YVR→HND Feb 14: USD 571  Korean Air
+  [24/76]    one-way  YVR→HND Feb 15: USD 835  China Airlines
+  [25/76]    one-way  YVR→NRT Feb 12: USD 631  Korean Air
+  [26/76]    one-way  YVR→NRT Feb 13: USD 596  WestJet
+  [27/76]    one-way  YVR→NRT Feb 14: USD 525  WestJet
+  [28/76]    one-way  YVR→NRT Feb 15: USD 525  WestJet
   [29/76] round-trip  SEA→HND Feb 12  +  HND→SEA Feb 20: USD 1,309  EVA Air
   [30/76] round-trip  SEA→HND Feb 12  +  HND→SEA Feb 21: USD 1,397  American
   [31/76] round-trip  SEA→HND Feb 12  +  HND→SEA Feb 22: USD 1,056  American
@@ -34,7 +34,7 @@ Running 76 searches (2026-11-06T09:27:55+00:00)
   [33/76] round-trip  SEA→HND Feb 13  +  HND→SEA Feb 21: USD 1,187  Cathay Pacific
   [34/76] round-trip  SEA→HND Feb 13  +  HND→SEA Feb 22: USD 1,003  American
   [35/76] round-trip  SEA→HND Feb 14  +  HND→SEA Feb 20: USD 1,229  EVA Air
-  [36/76] round-trip  SEA→HND Feb 14  +  HND→SEA Feb 21: USD 1,260  Philippine Airlines
+  [36/76] round-trip  SEA→HND Feb 14  +  HND→SEA Feb 21: USD 1,256  Korean Air
   [37/76] round-trip  SEA→HND Feb 14  +  HND→SEA Feb 22: USD 1,000  American
   [38/76] round-trip  SEA→HND Feb 15  +  HND→SEA Feb 20: USD 1,292  China Airlines
   [39/76] round-trip  SEA→HND Feb 15  +  HND→SEA Feb 21: USD 1,137  Cathay Pacific
@@ -42,38 +42,38 @@ Running 76 searches (2026-11-06T09:27:55+00:00)
   [41/76] round-trip  SEA→NRT Feb 12  +  NRT→SEA Feb 20: USD 1,208  Delta, Korean Air
   [42/76] round-trip  SEA→NRT Feb 12  +  NRT→SEA Feb 21: USD 1,208  Delta, Korean Air
   [43/76] round-trip  SEA→NRT Feb 12  +  NRT→SEA Feb 22: USD 1,208  Delta, Korean Air
-  [44/76] round-trip  SEA→NRT Feb 13  +  NRT→SEA Feb 20: USD 1,189  Alaska, JAL
-  [45/76] round-trip  SEA→NRT Feb 13  +  NRT→SEA Feb 21: USD 1,381  Korean Air
-  [46/76] round-trip  SEA→NRT Feb 13  +  NRT→SEA Feb 22: USD 1,072  United, ANA
+  [44/76] round-trip  SEA→NRT Feb 13  +  NRT→SEA Feb 20: USD 1,293  EVA Air
+  [45/76] round-trip  SEA→NRT Feb 13  +  NRT→SEA Feb 21: USD 1,382  Alaska, JAL
+  [46/76] round-trip  SEA→NRT Feb 13  +  NRT→SEA Feb 22: USD 1,072  United
   [47/76] round-trip  SEA→NRT Feb 14  +  NRT→SEA Feb 20: USD 1,189  Alaska, JAL
-  [48/76] round-trip  SEA→NRT Feb 14  +  NRT→SEA Feb 21: USD 1,203  China Airlines
-  [49/76] round-trip  SEA→NRT Feb 14  +  NRT→SEA Feb 22: USD 1,066  United
+  [48/76] round-trip  SEA→NRT Feb 14  +  NRT→SEA Feb 21: USD 1,289  Korean Air
+  [49/76] round-trip  SEA→NRT Feb 14  +  NRT→SEA Feb 22: USD 1,012  American
   [50/76] round-trip  SEA→NRT Feb 15  +  NRT→SEA Feb 20: USD 1,223  China Airlines
   [51/76] round-trip  SEA→NRT Feb 15  +  NRT→SEA Feb 21: USD 1,223  China Airlines
-  [52/76] round-trip  SEA→NRT Feb 15  +  NRT→SEA Feb 22: USD 1,047  Cathay Pacific
-  [53/76] round-trip  YVR→HND Feb 12  +  HND→YVR Feb 20: USD 1,135  Air Canada, ANA
-  [54/76] round-trip  YVR→HND Feb 12  +  HND→YVR Feb 21: USD 1,101  Air Canada, ANA
-  [55/76] round-trip  YVR→HND Feb 12  +  HND→YVR Feb 22: USD 1,099  Air Canada, ANA
-  [56/76] round-trip  YVR→HND Feb 13  +  HND→YVR Feb 20: USD 1,304  Cathay Pacific
-  [57/76] round-trip  YVR→HND Feb 13  +  HND→YVR Feb 21: USD 1,298  Air Canada, ANA
-  [58/76] round-trip  YVR→HND Feb 13  +  HND→YVR Feb 22: USD 1,083  American
-  [59/76] round-trip  YVR→HND Feb 14  +  HND→YVR Feb 20: USD 1,099  Air Canada, ANA
-  [60/76] round-trip  YVR→HND Feb 14  +  HND→YVR Feb 21: USD 1,066  Air Canada, ANA
-  [61/76] round-trip  YVR→HND Feb 14  +  HND→YVR Feb 22: USD 950  Korean Air
-  [62/76] round-trip  YVR→HND Feb 15  +  HND→YVR Feb 20: USD 1,137  Cathay Pacific
-  [63/76] round-trip  YVR→HND Feb 15  +  HND→YVR Feb 21: USD 1,067  Air Canada, ANA
-  [64/76] round-trip  YVR→HND Feb 15  +  HND→YVR Feb 22: USD 970  Cathay Pacific
-  [65/76] round-trip  YVR→NRT Feb 12  +  NRT→YVR Feb 20: USD 1,107  Korean Air
-  [66/76] round-trip  YVR→NRT Feb 12  +  NRT→YVR Feb 21: USD 1,107  Korean Air
-  [67/76] round-trip  YVR→NRT Feb 12  +  NRT→YVR Feb 22: USD 1,066  Cathay Pacific
-  [68/76] round-trip  YVR→NRT Feb 13  +  NRT→YVR Feb 20: USD 1,192  WestJet
-  [69/76] round-trip  YVR→NRT Feb 13  +  NRT→YVR Feb 21: USD 1,397  Air Canada, JAL
-  [70/76] round-trip  YVR→NRT Feb 13  +  NRT→YVR Feb 22: USD 1,137  Cathay Pacific
-  [71/76] round-trip  YVR→NRT Feb 14  +  NRT→YVR Feb 20: USD 950  Korean Air
-  [72/76] round-trip  YVR→NRT Feb 14  +  NRT→YVR Feb 21: USD 950  Korean Air
-  [73/76] round-trip  YVR→NRT Feb 14  +  NRT→YVR Feb 22: USD 950  Korean Air
-  [74/76] round-trip  YVR→NRT Feb 15  +  NRT→YVR Feb 20: USD 1,054  Korean Air
-  [75/76] round-trip  YVR→NRT Feb 15  +  NRT→YVR Feb 21: USD 1,054  Korean Air
-  [76/76] round-trip  YVR→NRT Feb 15  +  NRT→YVR Feb 22: USD 970  Cathay Pacific
+  [52/76] round-trip  SEA→NRT Feb 15  +  NRT→SEA Feb 22: ERROR JSONDecodeError: Extra data: line 1 column 235 (char 234)
+  [53/76] round-trip  YVR→HND Feb 12  +  HND→YVR Feb 20: USD 1,130  Air Canada, ANA
+  [54/76] round-trip  YVR→HND Feb 12  +  HND→YVR Feb 21: USD 1,096  Air Canada, ANA
+  [55/76] round-trip  YVR→HND Feb 12  +  HND→YVR Feb 22: USD 1,095  Air Canada, ANA
+  [56/76] round-trip  YVR→HND Feb 13  +  HND→YVR Feb 20: USD 1,298  Cathay Pacific
+  [57/76] round-trip  YVR→HND Feb 13  +  HND→YVR Feb 21: USD 1,293  Air Canada, ANA
+  [58/76] round-trip  YVR→HND Feb 13  +  HND→YVR Feb 22: USD 1,078  American
+  [59/76] round-trip  YVR→HND Feb 14  +  HND→YVR Feb 20: USD 1,095  Air Canada, ANA
+  [60/76] round-trip  YVR→HND Feb 14  +  HND→YVR Feb 21: USD 1,061  Air Canada, ANA
+  [61/76] round-trip  YVR→HND Feb 14  +  HND→YVR Feb 22: USD 946  Korean Air
+  [62/76] round-trip  YVR→HND Feb 15  +  HND→YVR Feb 20: USD 1,132  Cathay Pacific
+  [63/76] round-trip  YVR→HND Feb 15  +  HND→YVR Feb 21: USD 1,063  Air Canada, ANA
+  [64/76] round-trip  YVR→HND Feb 15  +  HND→YVR Feb 22: USD 966  Cathay Pacific
+  [65/76] round-trip  YVR→NRT Feb 12  +  NRT→YVR Feb 20: USD 1,102  Korean Air
+  [66/76] round-trip  YVR→NRT Feb 12  +  NRT→YVR Feb 21: USD 1,102  Korean Air
+  [67/76] round-trip  YVR→NRT Feb 12  +  NRT→YVR Feb 22: USD 1,061  Cathay Pacific
+  [68/76] round-trip  YVR→NRT Feb 13  +  NRT→YVR Feb 20: USD 1,187  WestJet
+  [69/76] round-trip  YVR→NRT Feb 13  +  NRT→YVR Feb 21: USD 1,391  Air Canada, JAL
+  [70/76] round-trip  YVR→NRT Feb 13  +  NRT→YVR Feb 22: USD 1,187  WestJet
+  [71/76] round-trip  YVR→NRT Feb 14  +  NRT→YVR Feb 20: USD 946  Korean Air
+  [72/76] round-trip  YVR→NRT Feb 14  +  NRT→YVR Feb 21: USD 946  Korean Air
+  [73/76] round-trip  YVR→NRT Feb 14  +  NRT→YVR Feb 22: USD 946  Korean Air
+  [74/76] round-trip  YVR→NRT Feb 15  +  NRT→YVR Feb 20: USD 1,049  Korean Air
+  [75/76] round-trip  YVR→NRT Feb 15  +  NRT→YVR Feb 21: USD 1,049  Korean Air
+  [76/76] round-trip  YVR→NRT Feb 15  +  NRT→YVR Feb 22: USD 966  Cathay Pacific
 Done: 75 prices saved, 1 errors.
 Report written: /home/runner/work/sapporo-fare-watch/sapporo-fare-watch/report-tokyo.html
