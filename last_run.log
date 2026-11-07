@@ -1,4 +1,5 @@
-Running 68 searches (2026-11-07T08:50:58+00:00)
+h2 connection driver error: connection reset
+Running 68 searches (2026-11-07T18:50:05+00:00)
   [1/68]    one-way  HND→SEA Feb 20: USD 800  EVA Air
   [2/68]    one-way  HND→SEA Feb 21: USD 828  China Airlines
   [3/68]    one-way  HND→SEA Feb 22: USD 793  China Airlines
@@ -21,18 +22,18 @@ Running 68 searches (2026-11-07T08:50:58+00:00)
   [20/68]    one-way  YVR→CTS Feb 15: USD 725  Korean Air
   [21/68] multi-city  SEA→CTS Feb 12  +  HND→SEA Feb 20: USD 1,844  JAL
   [22/68] multi-city  SEA→CTS Feb 12  +  HND→SEA Feb 21: USD 1,844  JAL
-  [23/68] multi-city  SEA→CTS Feb 12  +  HND→SEA Feb 22: USD 1,663  JAL
-  [24/68] multi-city  SEA→CTS Feb 12  +  NRT→SEA Feb 20: USD 1,701  JAL
-  [25/68] multi-city  SEA→CTS Feb 12  +  NRT→SEA Feb 21: USD 1,845  JAL
+  [23/68] multi-city  SEA→CTS Feb 12  +  HND→SEA Feb 22: ERROR TimeoutError: error sending request for url (https://www.google.com/_/FlightsFrontendUi/data/travel.frontend.flights.FlightsFrontendSe
+  [24/68] multi-city  SEA→CTS Feb 12  +  NRT→SEA Feb 20: USD 1,705  JAL
+  [25/68] multi-city  SEA→CTS Feb 12  +  NRT→SEA Feb 21: USD 1,773  JAL
   [26/68] multi-city  SEA→CTS Feb 12  +  NRT→SEA Feb 22: USD 1,568  JAL
-  [27/68] multi-city  SEA→CTS Feb 13  +  HND→SEA Feb 20: USD 1,844  JAL
-  [28/68] multi-city  SEA→CTS Feb 13  +  HND→SEA Feb 21: USD 1,844  JAL
-  [29/68] multi-city  SEA→CTS Feb 13  +  HND→SEA Feb 22: USD 1,788  JAL
-  [30/68] multi-city  SEA→CTS Feb 13  +  NRT→SEA Feb 20: USD 1,709  JAL
-  [31/68] multi-city  SEA→CTS Feb 13  +  NRT→SEA Feb 21: USD 1,845  JAL
-  [32/68] multi-city  SEA→CTS Feb 13  +  NRT→SEA Feb 22: USD 1,568  JAL
+  [27/68] multi-city  SEA→CTS Feb 13  +  HND→SEA Feb 20: USD 1,844  American, JAL
+  [28/68] multi-city  SEA→CTS Feb 13  +  HND→SEA Feb 21: USD 1,594  American, JAL
+  [29/68] multi-city  SEA→CTS Feb 13  +  HND→SEA Feb 22: USD 1,413  American, JAL
+  [30/68] multi-city  SEA→CTS Feb 13  +  NRT→SEA Feb 20: USD 1,586  American, JAL
+  [31/68] multi-city  SEA→CTS Feb 13  +  NRT→SEA Feb 21: USD 1,596  American, JAL
+  [32/68] multi-city  SEA→CTS Feb 13  +  NRT→SEA Feb 22: ERROR TimeoutError: error sending request for url (https://www.google.com/_/FlightsFrontendUi/data/travel.frontend.flights.FlightsFrontendSe
   [33/68] multi-city  SEA→CTS Feb 14  +  HND→SEA Feb 20: USD 1,543  American, JAL
-  [34/68] multi-city  SEA→CTS Feb 14  +  HND→SEA Feb 21: USD 1,490  American, JAL
+  [34/68] multi-city  SEA→CTS Feb 14  +  HND→SEA Feb 21: ERROR TimeoutError: error sending request for url (https://www.google.com/_/FlightsFrontendUi/data/travel.frontend.flights.FlightsFrontendSe
   [35/68] multi-city  SEA→CTS Feb 14  +  HND→SEA Feb 22: USD 1,277  American, JAL
   [36/68] multi-city  SEA→CTS Feb 14  +  NRT→SEA Feb 20: USD 1,379  American, JAL
   [37/68] multi-city  SEA→CTS Feb 14  +  NRT→SEA Feb 21: USD 1,491  American, JAL
@@ -41,7 +42,7 @@ Running 68 searches (2026-11-07T08:50:58+00:00)
   [40/68] multi-city  SEA→CTS Feb 15  +  HND→SEA Feb 21: USD 1,293  American, JAL
   [41/68] multi-city  SEA→CTS Feb 15  +  HND→SEA Feb 22: USD 1,019  American, JAL
   [42/68] multi-city  SEA→CTS Feb 15  +  NRT→SEA Feb 20: USD 1,285  American, JAL
-  [43/68] multi-city  SEA→CTS Feb 15  +  NRT→SEA Feb 21: USD 1,295  American, JAL
+  [43/68] multi-city  SEA→CTS Feb 15  +  NRT→SEA Feb 21: ERROR TimeoutError: error sending request for url (https://www.google.com/_/FlightsFrontendUi/data/travel.frontend.flights.FlightsFrontendSe
   [44/68] multi-city  SEA→CTS Feb 15  +  NRT→SEA Feb 22: USD 1,101  American, JAL
   [45/68] multi-city  YVR→CTS Feb 12  +  HND→YVR Feb 20: USD 1,121  ANA
   [46/68] multi-city  YVR→CTS Feb 12  +  HND→YVR Feb 21: USD 1,206  ANA
@@ -66,5 +67,6 @@ Running 68 searches (2026-11-07T08:50:58+00:00)
   [65/68] multi-city  YVR→CTS Feb 15  +  HND→YVR Feb 22: USD 1,220  JAL
   [66/68] multi-city  YVR→CTS Feb 15  +  NRT→YVR Feb 20: USD 1,201  JAL, Jetstar
   [67/68] multi-city  YVR→CTS Feb 15  +  NRT→YVR Feb 21: USD 1,238  JAL, Jetstar
-Done: 67 prices saved, 0 errors.
+  [68/68] multi-city  YVR→CTS Feb 15  +  NRT→YVR Feb 22: USD 1,166  JAL, Jetstar
+Done: 64 prices saved, 4 errors.
 Report written: /home/runner/work/sapporo-fare-watch/sapporo-fare-watch/report.html
