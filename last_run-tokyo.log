@@ -1,85 +1,79 @@
-Running 76 searches (2026-11-21T20:33:39+00:00)
+Running 76 searches (2026-11-22T09:50:57+00:00)
   [1/76]    one-way  HND→SEA Feb 20: USD 800  EVA Air
   [2/76]    one-way  HND→SEA Feb 21: USD 829  China Airlines
-  [3/76]    one-way  HND→SEA Feb 22: USD 766  China Airlines
-  [4/76]    one-way  HND→YVR Feb 20: USD 748  ANA, Air Canada
+  [3/76]    one-way  HND→SEA Feb 22: ERROR JSONDecodeError: Extra data: line 1 column 236 (char 235)
+  [4/76]    one-way  HND→YVR Feb 20: USD 758  EVA Air
   [5/76]    one-way  HND→YVR Feb 21: USD 758  EVA Air
   [6/76]    one-way  HND→YVR Feb 22: USD 751  China Airlines
   [7/76]    one-way  NRT→SEA Feb 20: USD 786  EVA Air
   [8/76]    one-way  NRT→SEA Feb 21: USD 851  Korean Air
-  [9/76]    one-way  NRT→SEA Feb 22: USD 706  Air Canada
-  [10/76]    one-way  NRT→YVR Feb 20: USD 1,131  Korean Air
-  [11/76]    one-way  NRT→YVR Feb 21: USD 1,049  Korean Air
-  [12/76]    one-way  NRT→YVR Feb 22: USD 719  China Airlines
-  [13/76]    one-way  SEA→HND Feb 12: USD 597  American, JAL
-  [14/76]    one-way  SEA→HND Feb 13: USD 560  American
-  [15/76]    one-way  SEA→HND Feb 14: USD 419  Philippine Airlines
-  [16/76]    one-way  SEA→HND Feb 15: USD 547  American, JAL
-  [17/76]    one-way  SEA→NRT Feb 12: USD 578  Alaska, JAL
-  [18/76]    one-way  SEA→NRT Feb 13: USD 528  Alaska, JAL
-  [19/76]    one-way  SEA→NRT Feb 14: USD 515  Philippine Airlines
-  [20/76]    one-way  SEA→NRT Feb 15: USD 528  Alaska, JAL
-  [21/76]    one-way  YVR→HND Feb 12: USD 813  China Airlines
-  [22/76]    one-way  YVR→HND Feb 13: USD 888  EVA Air
-  [23/76]    one-way  YVR→HND Feb 14: USD 564  Cathay Pacific
-  [24/76]    one-way  YVR→HND Feb 15: USD 533  Cathay Pacific
-  [25/76]    one-way  YVR→NRT Feb 12: USD 587  WestJet
-  [26/76]    one-way  YVR→NRT Feb 13: USD 587  WestJet
-  [27/76]    one-way  YVR→NRT Feb 14: USD 489  WestJet
-  [28/76]    one-way  YVR→NRT Feb 15: USD 489  WestJet
-  [29/76] round-trip  SEA→HND Feb 12  +  HND→SEA Feb 20: USD 1,159  American, JAL
-  [30/76] round-trip  SEA→HND Feb 12  +  HND→SEA Feb 21: USD 1,492  China Airlines
-  [31/76] round-trip  SEA→HND Feb 12  +  HND→SEA Feb 22: USD 1,062  American
-  [32/76] round-trip  SEA→HND Feb 13  +  HND→SEA Feb 20: USD 1,205  American
-  [33/76] round-trip  SEA→HND Feb 13  +  HND→SEA Feb 21: USD 1,296  Cathay Pacific
-  [34/76] round-trip  SEA→HND Feb 13  +  HND→SEA Feb 22: USD 1,009  American
-  [35/76] round-trip  SEA→HND Feb 14  +  HND→SEA Feb 20: USD 1,199  American, JAL
-  [36/76] round-trip  SEA→HND Feb 14  +  HND→SEA Feb 21: USD 1,212  American
-  [37/76] round-trip  SEA→HND Feb 14  +  HND→SEA Feb 22: USD 1,006  American
-  [38/76] round-trip  SEA→HND Feb 15  +  HND→SEA Feb 20: USD 1,192  American
-  [39/76] round-trip  SEA→HND Feb 15  +  HND→SEA Feb 21: USD 1,137  Cathay Pacific
-  [40/76] round-trip  SEA→HND Feb 15  +  HND→SEA Feb 22: USD 1,006  American
+  [9/76]    one-way  NRT→SEA Feb 22: ERROR JSONDecodeError: Extra data: line 1 column 236 (char 235)
+  [10/76]    one-way  NRT→YVR Feb 20: ERROR JSONDecodeError: Extra data: line 1 column 236 (char 235)
+  [11/76]    one-way  NRT→YVR Feb 21: ERROR JSONDecodeError: Extra data: line 1 column 235 (char 234)
+  [12/76]    one-way  NRT→YVR Feb 22: ERROR JSONDecodeError: Extra data: line 1 column 234 (char 233)
+  [13/76]    one-way  SEA→HND Feb 12: ERROR JSONDecodeError: Extra data: line 1 column 234 (char 233)
+  [14/76]    one-way  SEA→HND Feb 13: ERROR JSONDecodeError: Extra data: line 1 column 235 (char 234)
+  [15/76]    one-way  SEA→HND Feb 14: ERROR JSONDecodeError: Extra data: line 1 column 232 (char 231)
+  [16/76]    one-way  SEA→HND Feb 15: ERROR JSONDecodeError: Extra data: line 1 column 235 (char 234)
+  [17/76]    one-way  SEA→NRT Feb 12: ERROR JSONDecodeError: Extra data: line 1 column 236 (char 235)
+  [18/76]    one-way  SEA→NRT Feb 13: ERROR JSONDecodeError: Extra data: line 1 column 233 (char 232)
+  [19/76]    one-way  SEA→NRT Feb 14: ERROR JSONDecodeError: Extra data: line 1 column 234 (char 233)
+  [20/76]    one-way  SEA→NRT Feb 15: ERROR JSONDecodeError: Extra data: line 1 column 236 (char 235)
+  [21/76]    one-way  YVR→HND Feb 12: ERROR ValueError: Could not find flight data in the HTML response. The page may have been blocked by Google, or the HTML structure has cha
+  [22/76]    one-way  YVR→HND Feb 13: ERROR JSONDecodeError: Extra data: line 1 column 234 (char 233)
+  [23/76]    one-way  YVR→HND Feb 14: ERROR JSONDecodeError: Extra data: line 1 column 236 (char 235)
+  [24/76]    one-way  YVR→HND Feb 15: ERROR JSONDecodeError: Extra data: line 1 column 236 (char 235)
+  [25/76]    one-way  YVR→NRT Feb 12: ERROR JSONDecodeError: Extra data: line 1 column 236 (char 235)
+  [26/76]    one-way  YVR→NRT Feb 13: ERROR JSONDecodeError: Extra data: line 1 column 236 (char 235)
+  [27/76]    one-way  YVR→NRT Feb 14: ERROR JSONDecodeError: Extra data: line 1 column 234 (char 233)
+  [28/76]    one-way  YVR→NRT Feb 15: ERROR JSONDecodeError: Extra data: line 1 column 232 (char 231)
+  [29/76] round-trip  SEA→HND Feb 12  +  HND→SEA Feb 20: ERROR JSONDecodeError: Extra data: line 1 column 232 (char 231)
+  [30/76] round-trip  SEA→HND Feb 12  +  HND→SEA Feb 21: ERROR JSONDecodeError: Extra data: line 1 column 233 (char 232)
+  [31/76] round-trip  SEA→HND Feb 12  +  HND→SEA Feb 22: ERROR JSONDecodeError: Extra data: line 1 column 232 (char 231)
+  [32/76] round-trip  SEA→HND Feb 13  +  HND→SEA Feb 20: ERROR JSONDecodeError: Extra data: line 1 column 236 (char 235)
+  [33/76] round-trip  SEA→HND Feb 13  +  HND→SEA Feb 21: ERROR JSONDecodeError: Extra data: line 1 column 236 (char 235)
+  [34/76] round-trip  SEA→HND Feb 13  +  HND→SEA Feb 22: ERROR JSONDecodeError: Extra data: line 1 column 234 (char 233)
+  [35/76] round-trip  SEA→HND Feb 14  +  HND→SEA Feb 20: ERROR ValueError: Could not find flight data in the HTML response. The page may have been blocked by Google, or the HTML structure has cha
+  [36/76] round-trip  SEA→HND Feb 14  +  HND→SEA Feb 21: ERROR JSONDecodeError: Extra data: line 1 column 232 (char 231)
+  [37/76] round-trip  SEA→HND Feb 14  +  HND→SEA Feb 22: ERROR JSONDecodeError: Extra data: line 1 column 234 (char 233)
+  [38/76] round-trip  SEA→HND Feb 15  +  HND→SEA Feb 20: ERROR JSONDecodeError: Extra data: line 1 column 236 (char 235)
+  [39/76] round-trip  SEA→HND Feb 15  +  HND→SEA Feb 21: ERROR JSONDecodeError: Extra data: line 1 column 236 (char 235)
+  [40/76] round-trip  SEA→HND Feb 15  +  HND→SEA Feb 22: USD 1,009  American
   [41/76] round-trip  SEA→NRT Feb 12  +  NRT→SEA Feb 20: USD 1,187  Delta, Korean Air
-  [42/76] round-trip  SEA→NRT Feb 12  +  NRT→SEA Feb 21: USD 1,244  Delta, Korean Air
+  [42/76] round-trip  SEA→NRT Feb 12  +  NRT→SEA Feb 21: USD 1,187  Delta, Korean Air
   [43/76] round-trip  SEA→NRT Feb 12  +  NRT→SEA Feb 22: USD 1,102  Alaska, JAL
   [44/76] round-trip  SEA→NRT Feb 13  +  NRT→SEA Feb 20: USD 1,132  Korean Air
-  [45/76] round-trip  SEA→NRT Feb 13  +  NRT→SEA Feb 21: USD 1,160  Alaska, JAL
-  [46/76] round-trip  SEA→NRT Feb 13  +  NRT→SEA Feb 22: USD 980  Air Canada
-  [47/76] round-trip  SEA→NRT Feb 14  +  NRT→SEA Feb 20: USD 1,186  China Airlines
+  [45/76] round-trip  SEA→NRT Feb 13  +  NRT→SEA Feb 21: USD 1,146  American
+  [46/76] round-trip  SEA→NRT Feb 13  +  NRT→SEA Feb 22: USD 1,012  Air Canada
+  [47/76] round-trip  SEA→NRT Feb 14  +  NRT→SEA Feb 20: ERROR JSONDecodeError: Extra data: line 1 column 236 (char 235)
   [48/76] round-trip  SEA→NRT Feb 14  +  NRT→SEA Feb 21: USD 1,130  China Airlines
-  [49/76] round-trip  SEA→NRT Feb 14  +  NRT→SEA Feb 22: USD 877  Air Canada
-  [50/76] round-trip  SEA→NRT Feb 15  +  NRT→SEA Feb 20: USD 1,138  Air Canada
-  [51/76] round-trip  SEA→NRT Feb 15  +  NRT→SEA Feb 21: USD 1,137  Cathay Pacific
-  [52/76] round-trip  SEA→NRT Feb 15  +  NRT→SEA Feb 22: USD 877  Air Canada
-  [53/76] round-trip  YVR→HND Feb 12  +  HND→YVR Feb 20: USD 1,139  Air Canada, ANA
-  [54/76] round-trip  YVR→HND Feb 12  +  HND→YVR Feb 21: USD 1,096  Air Canada, ANA
-  [55/76] round-trip  YVR→HND Feb 12  +  HND→YVR Feb 22: USD 1,094  Air Canada, ANA
-  [56/76] round-trip  YVR→HND Feb 13  +  HND→YVR Feb 20: USD 1,248  United, ANA
-  [57/76] round-trip  YVR→HND Feb 13  +  HND→YVR Feb 21: USD 1,379  United, ANA
-  [58/76] round-trip  YVR→HND Feb 13  +  HND→YVR Feb 22: USD 1,070  American
-  [59/76] round-trip  YVR→HND Feb 14  +  HND→YVR Feb 20: USD 811  Cathay Pacific
-  [60/76] round-trip  YVR→HND Feb 14  +  HND→YVR Feb 21: USD 1,061  Air Canada, ANA
-  [61/76] round-trip  YVR→HND Feb 14  +  HND→YVR Feb 22: USD 787  Cathay Pacific
-  [62/76] round-trip  YVR→HND Feb 15  +  HND→YVR Feb 20: USD 1,214  United
-  [63/76] round-trip  YVR→HND Feb 15  +  HND→YVR Feb 21: USD 1,272  Cathay Pacific
-  [64/76] round-trip  YVR→HND Feb 15  +  HND→YVR Feb 22: USD 1,036  American
-  [65/76] round-trip  YVR→NRT Feb 12  +  NRT→YVR Feb 20: USD 1,130  Air Canada, Jetstar
-  [66/76] round-trip  YVR→NRT Feb 12  +  NRT→YVR Feb 21: USD 1,196  Air Canada, Jetstar
-  [67/76] round-trip  YVR→NRT Feb 12  +  NRT→YVR Feb 22: USD 1,025  Air Canada, Jetstar
-  [68/76] round-trip  YVR→NRT Feb 13  +  NRT→YVR Feb 20: USD 1,149  American, JAL
-  [69/76] round-trip  YVR→NRT Feb 13  +  NRT→YVR Feb 21: USD 1,198  American, JAL
-  [70/76] round-trip  YVR→NRT Feb 13  +  NRT→YVR Feb 22: USD 1,128  United
-  [71/76] round-trip  YVR→NRT Feb 14  +  NRT→YVR Feb 20: USD 1,034  Korean Air
-  [72/76] round-trip  YVR→NRT Feb 14  +  NRT→YVR Feb 21: USD 1,034  Korean Air
-  [73/76] round-trip  YVR→NRT Feb 14  +  NRT→YVR Feb 22: USD 932  Korean Air
-  [74/76] round-trip  YVR→NRT Feb 15  +  NRT→YVR Feb 20: USD 1,072  WestJet
-  [75/76] round-trip  YVR→NRT Feb 15  +  NRT→YVR Feb 21: USD 1,177  WestJet
-  [76/76] round-trip  YVR→NRT Feb 15  +  NRT→YVR Feb 22: USD 1,071  Air Canada, Cathay Pacific
-Done: 76 prices saved, 0 errors.
-
-ALERTS:
-  YVR Feb 14–Feb 22: USD 787 (Round trip YVR⇄HND) — under target 900
-  YVR Feb 14–Feb 20: USD 811 (Round trip YVR⇄HND) — under target 900
-  SEA Feb 14–Feb 22: USD 877 (Round trip SEA⇄NRT) — under target 900, down 129 from 1,006
-  SEA Feb 15–Feb 22: USD 877 (Round trip SEA⇄NRT) — under target 900
+  [49/76] round-trip  SEA→NRT Feb 14  +  NRT→SEA Feb 22: ERROR JSONDecodeError: Extra data: line 1 column 235 (char 234)
+  [50/76] round-trip  SEA→NRT Feb 15  +  NRT→SEA Feb 20: ERROR JSONDecodeError: Extra data: line 1 column 236 (char 235)
+  [51/76] round-trip  SEA→NRT Feb 15  +  NRT→SEA Feb 21: ERROR JSONDecodeError: Extra data: line 1 column 234 (char 233)
+  [52/76] round-trip  SEA→NRT Feb 15  +  NRT→SEA Feb 22: ERROR ValueError: Could not find flight data in the HTML response. The page may have been blocked by Google, or the HTML structure has cha
+  [53/76] round-trip  YVR→HND Feb 12  +  HND→YVR Feb 20: USD 1,469  Air Canada, ANA
+  [54/76] round-trip  YVR→HND Feb 12  +  HND→YVR Feb 21: ERROR JSONDecodeError: Extra data: line 1 column 234 (char 233)
+  [55/76] round-trip  YVR→HND Feb 12  +  HND→YVR Feb 22: ERROR JSONDecodeError: Extra data: line 1 column 234 (char 233)
+  [56/76] round-trip  YVR→HND Feb 13  +  HND→YVR Feb 20: ERROR JSONDecodeError: Extra data: line 1 column 236 (char 235)
+  [57/76] round-trip  YVR→HND Feb 13  +  HND→YVR Feb 21: ERROR JSONDecodeError: Extra data: line 1 column 233 (char 232)
+  [58/76] round-trip  YVR→HND Feb 13  +  HND→YVR Feb 22: ERROR JSONDecodeError: Extra data: line 1 column 234 (char 233)
+  [59/76] round-trip  YVR→HND Feb 14  +  HND→YVR Feb 20: ERROR JSONDecodeError: Extra data: line 1 column 234 (char 233)
+  [60/76] round-trip  YVR→HND Feb 14  +  HND→YVR Feb 21: ERROR JSONDecodeError: Extra data: line 1 column 235 (char 234)
+  [61/76] round-trip  YVR→HND Feb 14  +  HND→YVR Feb 22: ERROR JSONDecodeError: Extra data: line 1 column 232 (char 231)
+  [62/76] round-trip  YVR→HND Feb 15  +  HND→YVR Feb 20: ERROR JSONDecodeError: Extra data: line 1 column 236 (char 235)
+  [63/76] round-trip  YVR→HND Feb 15  +  HND→YVR Feb 21: ERROR JSONDecodeError: Extra data: line 1 column 235 (char 234)
+  [64/76] round-trip  YVR→HND Feb 15  +  HND→YVR Feb 22: ERROR JSONDecodeError: Extra data: line 1 column 234 (char 233)
+  [65/76] round-trip  YVR→NRT Feb 12  +  NRT→YVR Feb 20: ERROR JSONDecodeError: Extra data: line 1 column 233 (char 232)
+  [66/76] round-trip  YVR→NRT Feb 12  +  NRT→YVR Feb 21: ERROR JSONDecodeError: Extra data: line 1 column 235 (char 234)
+  [67/76] round-trip  YVR→NRT Feb 12  +  NRT→YVR Feb 22: ERROR JSONDecodeError: Extra data: line 1 column 235 (char 234)
+  [68/76] round-trip  YVR→NRT Feb 13  +  NRT→YVR Feb 20: ERROR JSONDecodeError: Extra data: line 1 column 234 (char 233)
+  [69/76] round-trip  YVR→NRT Feb 13  +  NRT→YVR Feb 21: ERROR JSONDecodeError: Extra data: line 1 column 234 (char 233)
+  [70/76] round-trip  YVR→NRT Feb 13  +  NRT→YVR Feb 22: ERROR JSONDecodeError: Extra data: line 1 column 236 (char 235)
+  [71/76] round-trip  YVR→NRT Feb 14  +  NRT→YVR Feb 20: ERROR JSONDecodeError: Extra data: line 1 column 233 (char 232)
+  [72/76] round-trip  YVR→NRT Feb 14  +  NRT→YVR Feb 21: ERROR JSONDecodeError: Extra data: line 1 column 236 (char 235)
+  [73/76] round-trip  YVR→NRT Feb 14  +  NRT→YVR Feb 22: ERROR JSONDecodeError: Extra data: line 1 column 236 (char 235)
+  [74/76] round-trip  YVR→NRT Feb 15  +  NRT→YVR Feb 20: ERROR JSONDecodeError: Extra data: line 1 column 233 (char 232)
+  [75/76] round-trip  YVR→NRT Feb 15  +  NRT→YVR Feb 21: ERROR JSONDecodeError: Extra data: line 1 column 235 (char 234)
+  [76/76] round-trip  YVR→NRT Feb 15  +  NRT→YVR Feb 22: ERROR JSONDecodeError: Extra data: line 1 column 232 (char 231)
+Done: 16 prices saved, 60 errors.
 Report written: /home/runner/work/sapporo-fare-watch/sapporo-fare-watch/report-tokyo.html
