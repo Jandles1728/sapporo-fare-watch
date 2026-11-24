@@ -1,23 +1,23 @@
-Running 68 searches (2026-11-23T10:51:10+00:00)
-  [1/68]    one-way  HND→SEA Feb 20: USD 797  EVA Air
-  [2/68]    one-way  HND→SEA Feb 21: USD 826  China Airlines
-  [3/68]    one-way  HND→SEA Feb 22: USD 763  China Airlines
-  [4/68]    one-way  HND→YVR Feb 20: USD 755  EVA Air
-  [5/68]    one-way  HND→YVR Feb 21: USD 1,175  Korean Air
-  [6/68]    one-way  HND→YVR Feb 22: USD 684  Philippine Airlines
+Running 68 searches (2026-11-24T01:42:08+00:00)
+  [1/68]    one-way  HND→SEA Feb 20: USD 798  EVA Air
+  [2/68]    one-way  HND→SEA Feb 21: ERROR JSONDecodeError: Extra data: line 1 column 235 (char 234)
+  [3/68]    one-way  HND→SEA Feb 22: USD 807  China Airlines
+  [4/68]    one-way  HND→YVR Feb 20: USD 756  EVA Air
+  [5/68]    one-way  HND→YVR Feb 21: USD 846  China Airlines
+  [6/68]    one-way  HND→YVR Feb 22: ERROR JSONDecodeError: Extra data: line 1 column 235 (char 234)
   [7/68]    one-way  NRT→SEA Feb 20: USD 783  EVA Air
-  [8/68]    one-way  NRT→SEA Feb 21: USD 848  Korean Air
-  [9/68]    one-way  NRT→SEA Feb 22: USD 703  Air Canada
-  [10/68]    one-way  NRT→YVR Feb 20: USD 717  China Airlines
-  [11/68]    one-way  NRT→YVR Feb 21: USD 717  China Airlines
-  [12/68]    one-way  NRT→YVR Feb 22: USD 717  China Airlines
-  [13/68]    one-way  SEA→CTS Feb 12: ERROR JSONDecodeError: Extra data: line 1 column 235 (char 234)
-  [14/68]    one-way  SEA→CTS Feb 13: ERROR JSONDecodeError: Extra data: line 1 column 235 (char 234)
-  [15/68]    one-way  SEA→CTS Feb 14: ERROR JSONDecodeError: Extra data: line 1 column 235 (char 234)
-  [16/68]    one-way  SEA→CTS Feb 15: USD 550  ANA
-  [17/68]    one-way  YVR→CTS Feb 12: USD 656  Cathay Pacific
-  [18/68]    one-way  YVR→CTS Feb 13: ERROR JSONDecodeError: Extra data: line 1 column 235 (char 234)
-  [19/68]    one-way  YVR→CTS Feb 14: ERROR JSONDecodeError: Extra data: line 1 column 235 (char 234)
-  [20/68]    one-way  YVR→CTS Feb 15: USD 534  Cathay Pacific
+  [8/68]    one-way  NRT→SEA Feb 21: USD 849  Korean Air
+  [9/68]    one-way  NRT→SEA Feb 22: USD 704  Air Canada
+  [10/68]    one-way  NRT→YVR Feb 20: USD 734  China Airlines
+  [11/68]    one-way  NRT→YVR Feb 21: USD 734  China Airlines
+  [12/68]    one-way  NRT→YVR Feb 22: ERROR JSONDecodeError: Extra data: line 1 column 235 (char 234)
+  [13/68]    one-way  SEA→CTS Feb 12: USD 812  Korean Air
+  [14/68]    one-way  SEA→CTS Feb 13: USD 771  Delta, Korean Air
+  [15/68]    one-way  SEA→CTS Feb 14: USD 550  ANA
+  [16/68]    one-way  SEA→CTS Feb 15: ERROR JSONDecodeError: Extra data: line 1 column 235 (char 234)
+  [17/68]    one-way  YVR→CTS Feb 12: ERROR JSONDecodeError: Extra data: line 1 column 235 (char 234)
+  [18/68]    one-way  YVR→CTS Feb 13: USD 946  EVA Air
+  [19/68]    one-way  YVR→CTS Feb 14: USD 745  Cathay Pacific
+  [20/68]    one-way  YVR→CTS Feb 15: USD 532  Cathay Pacific
 Done: 15 prices saved, 5 errors.
 Report written: /home/runner/work/sapporo-fare-watch/sapporo-fare-watch/report.html
