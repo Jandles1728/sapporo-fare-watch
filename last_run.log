@@ -1,0 +1,24 @@
+Running 68 searches (2026-11-26T10:58:30+00:00)
+  [1/68]    one-way  HND→SEA Feb 20: USD 893  American
+  [2/68]    one-way  HND→SEA Feb 21: USD 893  American
+  [3/68]    one-way  HND→SEA Feb 22: USD 842  American
+  [4/68]    one-way  HND→YVR Feb 20: USD 754  EVA Air
+  [5/68]    one-way  HND→YVR Feb 21: USD 754  EVA Air
+  [6/68]    one-way  HND→YVR Feb 22: USD 754  EVA Air
+  [7/68]    one-way  NRT→SEA Feb 20: USD 832  EVA Air
+  [8/68]    one-way  NRT→SEA Feb 21: USD 847  Korean Air
+  [9/68]    one-way  NRT→SEA Feb 22: USD 750  Air Canada
+  [10/68]    one-way  NRT→YVR Feb 20: USD 1,126  Korean Air
+  [11/68]    one-way  NRT→YVR Feb 21: USD 759  Trinity Airways
+  [12/68]    one-way  NRT→YVR Feb 22: USD 726  Trinity Airways
+  [13/68]    one-way  SEA→CTS Feb 12: USD 771  Delta, Korean Air
+  [14/68]    one-way  SEA→CTS Feb 13: USD 771  Delta, Korean Air
+  [15/68]    one-way  SEA→CTS Feb 14: USD 550  Delta, Korean Air
+  [16/68]    one-way  SEA→CTS Feb 15: USD 550  ANA
+  [17/68]    one-way  YVR→CTS Feb 12: USD 660  Cathay Pacific
+  [18/68]    one-way  YVR→CTS Feb 13: USD 660  Cathay Pacific
+  [19/68]    one-way  YVR→CTS Feb 14: USD 660  Cathay Pacific
+  [20/68]    one-way  YVR→CTS Feb 15: USD 537  Cathay Pacific
+  [21/68] multi-city  SEA→CTS Feb 12  +  HND→SEA Feb 20: ERROR TimeoutError: error sending request for url (https://www.google.com/_/FlightsFrontendUi/data/travel.frontend.flights.FlightsFrontendSe
+Done: 20 prices saved, 1 errors.
+Report written: /home/runner/work/sapporo-fare-watch/sapporo-fare-watch/report.html
